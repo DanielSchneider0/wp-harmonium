@@ -40,7 +40,7 @@ add_action( 'customize_register', 'harmonium_include_custom_controls', -999 );
  * @author WDS
  */
 function harmonium_customize_scripts() {
-	wp_enqueue_script( '_s-customize-livepreview', get_template_directory_uri() . '/inc/customizer/assets/scripts/livepreview.js', array( 'jquery', 'customize-preview' ), '1.0.0', true );
+	wp_enqueue_script( 'harmonium-customize-livepreview', get_template_directory_uri() . '/inc/customizer/assets/scripts/livepreview.js', array( 'jquery', 'customize-preview' ), '1.0.0', true );
 }
 add_action( 'customize_preview_init', 'harmonium_customize_scripts' );
 

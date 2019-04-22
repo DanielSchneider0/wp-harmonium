@@ -146,7 +146,7 @@ Because I'm bundled with Gulp, basic knowledge of the command line and the follo
 
 If you want to set me up manually:
 
-1) [Download]() and extract the zip into your `wp-content/themes` directory and rename `wd_s-master` to fit your needs.
+1) [Download]() and extract the zip into your `wp-content/themes` directory and rename `wdharmonium-master` to fit your needs.
 
 2) Find & Replace
 
@@ -156,7 +156,7 @@ You'll need to change all instances of the names: `_s`.
 * Search for: `harmonium_` and replace with: `project-name_` to capture all the function names
 * Search for: `Text Domain: Harmonium` and replace with: `Text Domain: project-name` in style.css
 * Search for (and include the leading space): <code>&nbsp;_s</code> and replace with: <code>&nbsp;Project Name</code> (with a space before it) to capture DocBlocks
-* Search for: `_s-` and replace with: `project-name-` to capture prefixed handles
+* Search for: `harmonium-` and replace with: `project-name-` to capture prefixed handles
 * Search for `_s.pot` and replace with: `project-name.pot` to capture translation files
 * Search for `_s.com` and replace with: `project-name.dev` to match your local development URL
 * Edit the theme information in the header of style.scss to meet your needs
