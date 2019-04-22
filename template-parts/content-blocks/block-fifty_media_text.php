@@ -2,7 +2,7 @@
 /**
  *  The template used for displaying fifty/fifty media/text.
  *
- * @package _s
+ * @package Harmonium
  */
 
 // Set up fields.

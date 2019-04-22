@@ -6,7 +6,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package _s
+ * @package Harmonium
  */
 
 // Omit class if password protected and content is hidden.

@@ -2,7 +2,7 @@
 /**
  * The template used for displaying media in the scaffolding library.
  *
- * @package _s
+ * @package Harmonium
  */
 
 global $wp_embed;

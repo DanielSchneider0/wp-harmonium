@@ -4,7 +4,7 @@
  *
  * File for custom scaffolding Library functionality.
  *
- * @package _s
+ * @package Harmonium
  */
 
 /**

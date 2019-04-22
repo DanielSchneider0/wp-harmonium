@@ -2,7 +2,7 @@
 /**
  * The template used for displaying an accordion block.
  *
- * @package _s
+ * @package Harmonium
  */
 
 // Set up fields.

@@ -2,7 +2,7 @@
 /**
  * The template used for displaying typography in the scaffolding library.
  *
- * @package _s
+ * @package Harmonium
  */
 
 ?>

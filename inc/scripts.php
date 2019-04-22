@@ -2,7 +2,7 @@
 /**
  * Custom scripts and styles.
  *
- * @package _s
+ * @package Harmonium
  */
 
 /**

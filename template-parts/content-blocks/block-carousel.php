@@ -2,7 +2,7 @@
 /**
  * The template used for displaying a caroursel.
  *
- * @package _s
+ * @package Harmonium
  */
 
 $classnames[] = 'content-block carousel-block';

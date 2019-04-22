@@ -2,7 +2,7 @@
 /**
  * Customizer sections.
  *
- * @package _s
+ * @package Harmonium
  */
 
 /**

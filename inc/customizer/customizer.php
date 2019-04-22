@@ -2,7 +2,7 @@
 /**
  * Set up the theme customizer.
  *
- * @package _s
+ * @package Harmonium
  */
 
 /**

@@ -2,7 +2,7 @@
 /**
  * Display social sharing icons.
  *
- * @package _s
+ * @package Harmonium
  */
 
 ?>

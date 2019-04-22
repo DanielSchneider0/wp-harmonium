@@ -6,7 +6,7 @@
  * from a specific category. The amount of posts can be
  * limited through the admin.
  *
- * @package _s
+ * @package Harmonium
  */
 
 // Set up fields.

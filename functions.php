@@ -1,10 +1,10 @@
 <?php
 /**
- * _s functions and definitions.
+ * Harmonium functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package _s
+ * @package Harmonium
  */
 
 if ( ! function_exists( 'harmonium_setup' ) ) :
@@ -21,7 +21,7 @@ if ( ! function_exists( 'harmonium_setup' ) ) :
 		/**
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on _s, use a find and replace
+		 * If you're building a theme based on Harmonium, use a find and replace
 		 * to change 'harmonium' to the name of your theme in all the template files.
 		 * You will also need to update the Gulpfile with the new text domain
 		 * and matching destination POT file.

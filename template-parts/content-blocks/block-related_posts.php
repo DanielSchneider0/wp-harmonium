@@ -2,7 +2,7 @@
 /**
  * The template used for displaying related posts.
  *
- * @package _s
+ * @package Harmonium
  */
 
 // Set up fields.

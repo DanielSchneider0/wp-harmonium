@@ -4,7 +4,7 @@
  *
  * A place to custom functionality related to Advanced Custom Fields.
  *
- * @package _s
+ * @package Harmonium
  */
 
 // If ACF isn't activated, then bail.

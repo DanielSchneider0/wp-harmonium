@@ -2,7 +2,7 @@
 /**
  * The template for displaying the search form.
  *
- * @package _s
+ * @package Harmonium
  */
 
 ?>
