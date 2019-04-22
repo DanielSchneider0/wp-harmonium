@@ -7,13 +7,13 @@
  * @package _s
  */
 
-if ( ! function_exists( '_s_posted_on' ) ) :
+if ( ! function_exists( 'harmonium_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 *
 	 * @author WDS
 	 */
-	function _s_posted_on() {
+	function harmonium_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -44,18 +44,18 @@ if ( ! function_exists( '_s_posted_on' ) ) :
 	}
 endif;
 
-if ( ! function_exists( '_s_entry_footer' ) ) :
+if ( ! function_exists( 'harmonium_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 *
 	 * @author WDS
 	 */
-	function _s_entry_footer() {
+	function harmonium_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( esc_html__( ', ', 'harmonium' ) );
-			if ( $categories_list && _s_categorized_blog() ) {
+			if ( $categories_list && harmonium_categorized_blog() ) {
 				/* translators: the post category */
 				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'harmonium' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
@@ -93,8 +93,8 @@ endif;
  *
  * @author WDS
  */
-function _s_display_svg( $args = array() ) {
-	echo _s_get_svg( $args ); // WPCS XSS Ok.
+function harmonium_display_svg( $args = array() ) {
+	echo harmonium_get_svg( $args ); // WPCS XSS Ok.
 }
 
 /**
@@ -104,7 +104,7 @@ function _s_display_svg( $args = array() ) {
  * @author WDS
  * @return string
  */
-function _s_get_svg( $args = array() ) {
+function harmonium_get_svg( $args = array() ) {
 
 	// Make sure $args are an array.
 	if ( empty( $args ) ) {
@@ -157,14 +157,14 @@ function _s_get_svg( $args = array() ) {
 
 	<svg
 	<?php
-		echo _s_get_the_content( $height ); // WPCS XSS OK.
-		echo _s_get_the_content( $width ); // WPCS XSS OK.
-		echo _s_get_the_content( $fill ); // WPCS XSS OK.
+		echo harmonium_get_the_content( $height ); // WPCS XSS OK.
+		echo harmonium_get_the_content( $width ); // WPCS XSS OK.
+		echo harmonium_get_the_content( $fill ); // WPCS XSS OK.
 	?>
 		class="icon icon-<?php echo esc_attr( $args['icon'] ); ?>"
 	<?php
-		echo _s_get_the_content( $aria_hidden ); // WPCS XSS OK.
-		echo _s_get_the_content( $aria_labelledby ); // WPCS XSS OK.
+		echo harmonium_get_the_content( $aria_hidden ); // WPCS XSS OK.
+		echo harmonium_get_the_content( $aria_labelledby ); // WPCS XSS OK.
 	?>
 		role="img">
 		<title id="<?php echo esc_attr( $block_title_id ); ?>">
@@ -204,7 +204,7 @@ function _s_get_svg( $args = array() ) {
  * @author WDS
  * @return string
  */
-function _s_get_the_title( $args = array() ) {
+function harmonium_get_the_title( $args = array() ) {
 
 	// Set defaults.
 	$defaults = array(
@@ -227,7 +227,7 @@ function _s_get_the_title( $args = array() ) {
  * @author WDS
  * @return string
  */
-function _s_get_the_excerpt( $args = array() ) {
+function harmonium_get_the_excerpt( $args = array() ) {
 
 	// Set defaults.
 	$defaults = array(
@@ -250,7 +250,7 @@ function _s_get_the_excerpt( $args = array() ) {
  * @author WDS
  * @return string
  */
-function _s_display_post_image( $size = 'thumbnail' ) {
+function harmonium_display_post_image( $size = 'thumbnail' ) {
 
 	// If post has a featured image, display it.
 	if ( has_post_thumbnail() ) {
@@ -258,7 +258,7 @@ function _s_display_post_image( $size = 'thumbnail' ) {
 		return false;
 	}
 
-	$attached_image_url = _s_get_attached_image_url( $size );
+	$attached_image_url = harmonium_get_attached_image_url( $size );
 
 	// Else, display an attached image or placeholder.
 	?>
@@ -274,7 +274,7 @@ function _s_display_post_image( $size = 'thumbnail' ) {
  * @author WDS
  * @return string
  */
-function _s_get_post_image_url( $size = 'thumbnail' ) {
+function harmonium_get_post_image_url( $size = 'thumbnail' ) {
 
 	// If post has a featured image, return its URL.
 	if ( has_post_thumbnail() ) {
@@ -288,7 +288,7 @@ function _s_get_post_image_url( $size = 'thumbnail' ) {
 	}
 
 	// Else, return the URL for an attached image or placeholder.
-	return _s_get_attached_image_url( $size );
+	return harmonium_get_attached_image_url( $size );
 }
 
 /**
@@ -299,7 +299,7 @@ function _s_get_post_image_url( $size = 'thumbnail' ) {
  * @author WDS
  * @return string
  */
-function _s_get_attached_image_url( $size = 'thumbnail' ) {
+function harmonium_get_attached_image_url( $size = 'thumbnail' ) {
 
 	// Check for any attached image.
 	$media = get_attached_media( 'image', get_the_ID() );
@@ -320,17 +320,17 @@ function _s_get_attached_image_url( $size = 'thumbnail' ) {
  * @author WDS
  * @return bool
  */
-function _s_display_copyright_text() {
+function harmonium_display_copyright_text() {
 
 	// Grab our customizer settings.
-	$copyright_text = get_theme_mod( '_s_copyright_text' );
+	$copyright_text = get_theme_mod( 'harmonium_copyright_text' );
 
 	// Stop if there's nothing to display.
 	if ( ! $copyright_text ) {
 		return false;
 	}
 
-	echo _s_get_the_content( do_shortcode( $copyright_text ) ); // phpcs: xss ok.
+	echo harmonium_get_the_content( do_shortcode( $copyright_text ) ); // phpcs: xss ok.
 }
 
 /**
@@ -339,7 +339,7 @@ function _s_display_copyright_text() {
  * @author WDS
  * @return string
  */
-function _s_get_twitter_share_url() {
+function harmonium_get_twitter_share_url() {
 	return add_query_arg(
 		array(
 			'text' => rawurlencode( html_entity_decode( get_the_title() ) ),
@@ -355,7 +355,7 @@ function _s_get_twitter_share_url() {
  * @author WDS
  * @return string
  */
-function _s_get_facebook_share_url() {
+function harmonium_get_facebook_share_url() {
 	return add_query_arg( 'u', rawurlencode( get_the_permalink() ), 'https://www.facebook.com/sharer/sharer.php' );
 }
 
@@ -365,7 +365,7 @@ function _s_get_facebook_share_url() {
  * @author WDS
  * @return string
  */
-function _s_get_linkedin_share_url() {
+function harmonium_get_linkedin_share_url() {
 	return add_query_arg(
 		array(
 			'title' => rawurlencode( html_entity_decode( get_the_title() ) ),
@@ -380,7 +380,7 @@ function _s_get_linkedin_share_url() {
  *
  * @author WDS
  */
-function _s_display_social_network_links() {
+function harmonium_display_social_network_links() {
 
 	// Create an array of our social links for ease of setup.
 	// Change the order of the networks in this array to change the output order.
@@ -393,7 +393,7 @@ function _s_display_social_network_links() {
 		foreach ( $social_networks as $network ) :
 
 			// Look for the social network's URL.
-			$network_url = get_theme_mod( '_s_' . $network . '_link' );
+			$network_url = get_theme_mod( 'harmonium_' . $network . '_link' );
 
 			// Only display the list item if a URL is set.
 			if ( ! empty( $network_url ) ) :
@@ -401,7 +401,7 @@ function _s_display_social_network_links() {
 				<li class="social-icon <?php echo esc_attr( $network ); ?>">
 					<a href="<?php echo esc_url( $network_url ); ?>">
 						<?php
-						_s_display_svg(
+						harmonium_display_svg(
 							array(
 								'icon' => $network . '-square',
 							)
@@ -428,7 +428,7 @@ function _s_display_social_network_links() {
  * @author WDS
  * @param array $args Card defaults.
  */
-function _s_display_card( $args = array() ) {
+function harmonium_display_card( $args = array() ) {
 
 	// Setup defaults.
 	$defaults = array(
@@ -474,10 +474,10 @@ function _s_display_card( $args = array() ) {
  * @author Corey Collins
  * @return string
  */
-function _s_display_header_button() {
+function harmonium_display_header_button() {
 
 	// Get our button setting.
-	$button_setting = get_theme_mod( '_s_header_button' );
+	$button_setting = get_theme_mod( 'harmonium_header_button' );
 
 	// If we have no button displayed, don't display the markup.
 	if ( 'none' === $button_setting ) {
@@ -485,8 +485,8 @@ function _s_display_header_button() {
 	}
 
 	// Grab our button and text values.
-	$button_url  = get_theme_mod( '_s_header_button_url' );
-	$button_text = get_theme_mod( '_s_header_button_text' );
+	$button_url  = get_theme_mod( 'harmonium_header_button_url' );
+	$button_text = get_theme_mod( 'harmonium_header_button_text' );
 	?>
 	<div class="site-header-action">
 		<?php
@@ -515,7 +515,7 @@ function _s_display_header_button() {
  * @return void.
  * @author Corey Collins
  */
-function _s_display_numeric_pagination( $args = array() ) {
+function harmonium_display_numeric_pagination( $args = array() ) {
 
 	// Set defaults.
 	$defaults = array(
@@ -547,7 +547,7 @@ function _s_display_numeric_pagination( $args = array() ) {
  * @author WDS
  * @author Corey Collins
  */
-function _s_display_mobile_menu() {
+function harmonium_display_mobile_menu() {
 
 	// Bail if no mobile or primary menus are set.
 	if ( ! has_nav_menu( 'mobile' ) && ! has_nav_menu( 'primary' ) ) {
@@ -597,7 +597,7 @@ function _s_display_mobile_menu() {
  *
  * @return bool
  */
-function _s_has_array_key( $key, $array = array() ) {
+function harmonium_has_array_key( $key, $array = array() ) {
 
 	if ( ! is_array( $array ) || ( ! $array || ! $key ) ) {
 		return false;

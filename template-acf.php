@@ -23,7 +23,7 @@ get_header(); ?>
 			if ( post_password_required() ) :
 				get_template_part( 'template-parts/content', 'password-protected' );
 			else :
-				_s_display_content_blocks();
+				harmonium_display_content_blocks();
 			endif;
 		?>
 

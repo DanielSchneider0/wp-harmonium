@@ -11,9 +11,9 @@
 	<h5 class="social-share-title"><?php esc_html_e( 'Share This', 'harmonium' ); ?></h5>
 	<ul class="social-icons menu menu-horizontal">
 		<li class="social-icon">
-			<a href="<?php echo esc_url( _s_get_twitter_share_url() ); ?>" onclick="window.open(this.href, 'targetWindow', 'toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, top=150, left=0, width=600, height=300' ); return false;">
+			<a href="<?php echo esc_url( harmonium_get_twitter_share_url() ); ?>" onclick="window.open(this.href, 'targetWindow', 'toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, top=150, left=0, width=600, height=300' ); return false;">
 				<?php
-				_s_display_svg(
+				harmonium_display_svg(
 					array(
 						'icon'  => 'twitter-square',
 						'title' => __( 'Twitter', 'harmonium' ),
@@ -25,9 +25,9 @@
 			</a>
 		</li>
 		<li class="social-icon">
-			<a href="<?php echo esc_url( _s_get_facebook_share_url() ); ?>" onclick="window.open(this.href, 'targetWindow', 'toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, top=150, left=0, width=600, height=300' ); return false;">
+			<a href="<?php echo esc_url( harmonium_get_facebook_share_url() ); ?>" onclick="window.open(this.href, 'targetWindow', 'toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, top=150, left=0, width=600, height=300' ); return false;">
 				<?php
-				_s_display_svg(
+				harmonium_display_svg(
 					array(
 						'icon'  => 'facebook-square',
 						'title' => __( 'Facebook', 'harmonium' ),
@@ -39,9 +39,9 @@
 			</a>
 		</li>
 		<li class="social-icon">
-			<a href="<?php echo esc_url( _s_get_linkedin_share_url() ); ?>" onclick="window.open(this.href, 'targetWindow', 'toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, top=150, left=0, width=475, height=505' ); return false;">
+			<a href="<?php echo esc_url( harmonium_get_linkedin_share_url() ); ?>" onclick="window.open(this.href, 'targetWindow', 'toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, top=150, left=0, width=475, height=505' ); return false;">
 				<?php
-				_s_display_svg(
+				harmonium_display_svg(
 					array(
 						'icon'  => 'linkedin-square',
 						'title' => __( 'LinkedIn', 'harmonium' ),

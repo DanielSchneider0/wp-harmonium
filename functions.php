@@ -7,7 +7,7 @@
  * @package _s
  */
 
-if ( ! function_exists( '_s_setup' ) ) :
+if ( ! function_exists( 'harmonium_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -17,7 +17,7 @@ if ( ! function_exists( '_s_setup' ) ) :
 	 *
 	 * @author WDS
 	 */
-	function _s_setup() {
+	function harmonium_setup() {
 		/**
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -74,7 +74,7 @@ if ( ! function_exists( '_s_setup' ) ) :
 		add_theme_support(
 			'custom-background',
 			apply_filters(
-				'_s_custom_background_args',
+				'harmonium_custom_background_args',
 				array(
 					'default-color' => 'ffffff',
 					'default-image' => '',
@@ -98,7 +98,7 @@ if ( ! function_exists( '_s_setup' ) ) :
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
 		// Gutenberg color palette support.
-		add_theme_support( 'editor-color-palette', _s_get_theme_colors_gutenberg() );
+		add_theme_support( 'editor-color-palette', harmonium_get_theme_colors_gutenberg() );
 
 		// Gutenberg support for full-width/wide alignment of supported blocks.
 		add_theme_support( 'align-wide' );
@@ -137,8 +137,8 @@ if ( ! function_exists( '_s_setup' ) ) :
 		// Gutenberg responsive embed support.
 		add_theme_support( 'responsive-embeds' );
 	}
-endif; // _s_setup
-add_action( 'after_setup_theme', '_s_setup' );
+endif; // harmonium_setup
+add_action( 'after_setup_theme', 'harmonium_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -148,10 +148,10 @@ add_action( 'after_setup_theme', '_s_setup' );
  * @global int $content_width
  * @author WDS
  */
-function _s_content_width() {
-	$GLOBALS['content_width'] = apply_filters( '_s_content_width', 640 );
+function harmonium_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'harmonium_content_width', 640 );
 }
-add_action( 'after_setup_theme', '_s_content_width', 0 );
+add_action( 'after_setup_theme', 'harmonium_content_width', 0 );
 
 /**
  * Register widget area.
@@ -159,7 +159,7 @@ add_action( 'after_setup_theme', '_s_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  * @author WDS
  */
-function _s_widgets_init() {
+function harmonium_widgets_init() {
 
 	// Define sidebars.
 	$sidebars = array(
@@ -182,7 +182,7 @@ function _s_widgets_init() {
 	}
 
 }
-add_action( 'widgets_init', '_s_widgets_init' );
+add_action( 'widgets_init', 'harmonium_widgets_init' );
 
 /**
  * Custom template tags for this theme.

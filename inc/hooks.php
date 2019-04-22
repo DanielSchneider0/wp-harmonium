@@ -14,7 +14,7 @@
  * @author WDS
  * @return array
  */
-function _s_body_classes( $classes ) {
+function harmonium_body_classes( $classes ) {
 
 	// @codingStandardsIgnoreStart
 	// Allows for incorrect snake case like is_IE to be used without throwing errors.
@@ -71,23 +71,23 @@ function _s_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', '_s_body_classes' );
+add_filter( 'body_class', 'harmonium_body_classes' );
 
 /**
- * Flush out the transients used in _s_categorized_blog.
+ * Flush out the transients used in harmonium_categorized_blog.
  *
  * @author WDS
  * @return string
  */
-function _s_category_transient_flusher() {
+function harmonium_category_transient_flusher() {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return false;
 	}
 	// Like, beat it. Dig?
-	delete_transient( '_s_categories' );
+	delete_transient( 'harmonium_categories' );
 }
-add_action( 'delete_category', '_s_category_transient_flusher' );
-add_action( 'save_post', '_s_category_transient_flusher' );
+add_action( 'delete_category', 'harmonium_category_transient_flusher' );
+add_action( 'save_post', 'harmonium_category_transient_flusher' );
 
 /**
  * Customize "Read More" string on <!-- more --> with the_content();
@@ -95,10 +95,10 @@ add_action( 'save_post', '_s_category_transient_flusher' );
  * @author WDS
  * @return string
  */
-function _s_content_more_link() {
+function harmonium_content_more_link() {
 	return ' <a class="more-link" href="' . get_permalink() . '">' . esc_html__( 'Read More', 'harmonium' ) . '...</a>';
 }
-add_filter( 'the_content_more_link', '_s_content_more_link' );
+add_filter( 'the_content_more_link', 'harmonium_content_more_link' );
 
 /**
  * Customize the [...] on the_excerpt();
@@ -107,10 +107,10 @@ add_filter( 'the_content_more_link', '_s_content_more_link' );
  * @param string $more The current $more string.
  * @return string
  */
-function _s_excerpt_more( $more ) {
+function harmonium_excerpt_more( $more ) {
 	return sprintf( ' <a class="more-link" href="%1$s">%2$s</a>', get_permalink( get_the_ID() ), esc_html__( 'Read more...', 'harmonium' ) );
 }
-add_filter( 'excerpt_more', '_s_excerpt_more' );
+add_filter( 'excerpt_more', 'harmonium_excerpt_more' );
 
 /**
  * Enable custom mime types.
@@ -119,12 +119,12 @@ add_filter( 'excerpt_more', '_s_excerpt_more' );
  * @param array $mimes Current allowed mime types.
  * @return array
  */
-function _s_custom_mime_types( $mimes ) {
+function harmonium_custom_mime_types( $mimes ) {
 	$mimes['svg']  = 'image/svg+xml';
 	$mimes['svgz'] = 'image/svg+xml';
 	return $mimes;
 }
-add_filter( 'upload_mimes', '_s_custom_mime_types' );
+add_filter( 'upload_mimes', 'harmonium_custom_mime_types' );
 
 /**
  * Disable the "Cancel reply" link. It doesn't seem to work anyway, and it only makes the "Leave Reply" heading confusing.
@@ -133,7 +133,7 @@ add_filter( 'cancel_comment_reply_link', '__return_false' );
 
 // Create shortcode for SVG.
 // Usage [svg icon="facebook-square" title="facebook" desc="like us on facebook" fill="#000000" height="20px" width="20px"].
-add_shortcode( 'svg', '_s_display_svg' );
+add_shortcode( 'svg', 'harmonium_display_svg' );
 
 /**
  * Display the customizer header scripts.
@@ -141,10 +141,10 @@ add_shortcode( 'svg', '_s_display_svg' );
  * @author Greg Rickaby
  * @return string
  */
-function _s_display_customizer_header_scripts() {
+function harmonium_display_customizer_header_scripts() {
 
 	// Check for header scripts.
-	$scripts = get_theme_mod( '_s_header_scripts' );
+	$scripts = get_theme_mod( 'harmonium_header_scripts' );
 
 	// None? Bail...
 	if ( ! $scripts ) {
@@ -152,9 +152,9 @@ function _s_display_customizer_header_scripts() {
 	}
 
 	// Otherwise, echo the scripts!
-	echo _s_get_the_content( $scripts ); // WPCS XSS OK.
+	echo harmonium_get_the_content( $scripts ); // WPCS XSS OK.
 }
-add_action( 'wp_head', '_s_display_customizer_header_scripts', 999 );
+add_action( 'wp_head', 'harmonium_display_customizer_header_scripts', 999 );
 
 /**
  * Display the customizer footer scripts.
@@ -162,10 +162,10 @@ add_action( 'wp_head', '_s_display_customizer_header_scripts', 999 );
  * @author Greg Rickaby
  * @return string
  */
-function _s_display_customizer_footer_scripts() {
+function harmonium_display_customizer_footer_scripts() {
 
 	// Check for footer scripts.
-	$scripts = get_theme_mod( '_s_footer_scripts' );
+	$scripts = get_theme_mod( 'harmonium_footer_scripts' );
 
 	// None? Bail...
 	if ( ! $scripts ) {
@@ -173,9 +173,9 @@ function _s_display_customizer_footer_scripts() {
 	}
 
 	// Otherwise, echo the scripts!
-	echo _s_get_the_content( $scripts ); // WPCS XSS OK.
+	echo harmonium_get_the_content( $scripts ); // WPCS XSS OK.
 }
-add_action( 'wp_footer', '_s_display_customizer_footer_scripts', 999 );
+add_action( 'wp_footer', 'harmonium_display_customizer_footer_scripts', 999 );
 
 /**
  * Adds OG tags to the head for better social sharing.
@@ -183,7 +183,7 @@ add_action( 'wp_footer', '_s_display_customizer_footer_scripts', 999 );
  * @return string Just an empty string if Yoast is found.
  * @author Corey Collins
  */
-function _s_add_og_tags() {
+function harmonium_add_og_tags() {
 
 	// Bail if Yoast is installed, since it will handle things.
 	if ( class_exists( 'WPSEO_Options' ) ) {
@@ -313,7 +313,7 @@ function _s_add_og_tags() {
 	<meta name="description" content="<?php echo esc_attr( $card_long_description ); ?>" />
 	<?php
 }
-add_action( 'wp_head', '_s_add_og_tags' );
+add_action( 'wp_head', 'harmonium_add_og_tags' );
 
 /**
  * Removes or Adjusts the prefix on category archive page titles.
@@ -322,7 +322,7 @@ add_action( 'wp_head', '_s_add_og_tags' );
  * @return string The updated $block_title.
  * @author Corey Collins
  */
-function _s_remove_archive_title_prefix( $block_title ) {
+function harmonium_remove_archive_title_prefix( $block_title ) {
 
 	// Get the single category title with no prefix.
 	$single_cat_title = single_term_title( '', false );
@@ -333,4 +333,4 @@ function _s_remove_archive_title_prefix( $block_title ) {
 
 	return $block_title;
 }
-add_filter( 'get_the_archive_title', '_s_remove_archive_title_prefix' );
+add_filter( 'get_the_archive_title', 'harmonium_remove_archive_title_prefix' );

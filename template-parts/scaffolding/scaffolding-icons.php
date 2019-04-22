@@ -13,11 +13,11 @@
 
 	<?php
 	// SVG Icon.
-	_s_display_scaffolding_section(
+	harmonium_display_scaffolding_section(
 		array(
 			'title'       => 'SVG',
 			'description' => 'Display inline SVGs.',
-			'usage'       => '<?php _s_display_svg( array(
+			'usage'       => '<?php harmonium_display_svg( array(
 				\'icon\'   => \'facebook-square\',
 				\'title\'  => \'Facebook Icon\',
 				\'desc\'   => \'Facebook social icon svg\',
@@ -36,7 +36,7 @@
 				'height' => '(optional) The height of the icon. Default: none',
 				'width'  => '(optional) The width of the icon. Default: none',
 			),
-			'output'      => _s_get_svg(
+			'output'      => harmonium_get_svg(
 				array(
 					'icon'   => 'facebook-square',
 					'title'  => 'Facebook Icon',

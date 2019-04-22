@@ -13,11 +13,11 @@
 
 	<?php
 	// Right-aligned Image.
-	_s_display_scaffolding_section(
+	harmonium_display_scaffolding_section(
 		array(
 			'title'       => 'Numeric Pagination',
 			'description' => 'Display numeric pagination.',
-			'usage'       => '_s_display_numeric_pagination()',
+			'usage'       => 'harmonium_display_numeric_pagination()',
 			'output'      => '
 				<nav class="pagination-container">
 					<a class="prev page-numbers" href="#>«</a>

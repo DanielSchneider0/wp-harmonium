@@ -31,7 +31,7 @@ get_header(); ?>
 
 			endwhile;
 
-			_s_display_numeric_pagination();
+			harmonium_display_numeric_pagination();
 
 		else :
 

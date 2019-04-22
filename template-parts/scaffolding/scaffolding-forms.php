@@ -14,7 +14,7 @@
 	<?php
 	// Search form.
 	$echo = false; // set echo to false so the search form outputs correctly.
-	_s_display_scaffolding_section(
+	harmonium_display_scaffolding_section(
 		array(
 			'title'       => 'Search Form',
 			'description' => 'Display the search form.',
@@ -24,7 +24,7 @@
 	);
 
 	// Input.
-	_s_display_scaffolding_section(
+	harmonium_display_scaffolding_section(
 		array(
 			'title'       => 'Input',
 			'description' => 'Display a normal input.',
@@ -34,7 +34,7 @@
 	);
 
 	// Default Select.
-	_s_display_scaffolding_section(
+	harmonium_display_scaffolding_section(
 		array(
 			'title'       => 'Default Select',
 			'description' => 'Display default select.',
@@ -44,7 +44,7 @@
 	);
 
 	// Checkbox.
-	_s_display_scaffolding_section(
+	harmonium_display_scaffolding_section(
 		array(
 			'title'       => 'Checkboxes',
 			'description' => 'Display checkboxes.',
@@ -66,7 +66,7 @@
 	);
 
 	// Radio boxes.
-	_s_display_scaffolding_section(
+	harmonium_display_scaffolding_section(
 		array(
 			'title'       => 'Radio boxes.',
 			'description' => 'Display radio boxes.',
@@ -88,7 +88,7 @@
 	);
 
 	// Textarea.
-	_s_display_scaffolding_section(
+	harmonium_display_scaffolding_section(
 		array(
 			'title'       => 'Textarea',
 			'description' => 'Display a textarea.',

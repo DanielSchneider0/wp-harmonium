@@ -12,20 +12,20 @@ $accordion_items = get_sub_field( 'accordion_items' );
 $row_index       = get_row_index();
 
 // Start a <container> with possible block options.
-_s_display_block_options(
+harmonium_display_block_options(
 	array(
 		'container' => 'section', // Any HTML5 container: section, div, etc...
 		'class'     => 'content-block accordion-block', // Container class.
 	)
 );
 ?>
-	<div class="container<?php echo esc_attr( _s_get_animation_class() ); ?>">
+	<div class="container<?php echo esc_attr( harmonium_get_animation_class() ); ?>">
 		<?php if ( $block_title ) : ?>
 			<h2 class="block-title"><?php echo esc_html( $block_title ); ?></h2>
 		<?php endif; ?>
 
 		<?php if ( $text ) : ?>
-			<?php echo _s_get_the_content( $text ); // phpcs: xss: ok. ?>
+			<?php echo harmonium_get_the_content( $text ); // phpcs: xss: ok. ?>
 		<?php endif; ?>
 
 		<?php if ( $accordion_items ) : ?>
@@ -50,7 +50,7 @@ _s_display_block_options(
 								</h3>
 							</div><!-- .accordion-item-header-->
 							<div id="<?php echo esc_attr( $item_content_id ); ?>" class="accordion-item-content" aria-hidden="true">
-								<?php echo _s_get_the_content( $item_content ); // phpcs: xss: ok. ?>
+								<?php echo harmonium_get_the_content( $item_content ); // phpcs: xss: ok. ?>
 							</div><!-- .accordion-item-content -->
 						</div>
 				<?php endwhile; ?>

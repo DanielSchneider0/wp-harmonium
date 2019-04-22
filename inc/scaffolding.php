@@ -13,7 +13,7 @@
  * @param array $args The scaffolding defaults.
  * @author Greg Rickaby Carrie Forde
  */
-function _s_display_scaffolding_section( $args = array() ) {
+function harmonium_display_scaffolding_section( $args = array() ) {
 
 	// Set defaults.
 	$defaults = array(
@@ -29,7 +29,7 @@ function _s_display_scaffolding_section( $args = array() ) {
 	$args = wp_parse_args( $args, $defaults );
 
 	// Grab our allowed tags.
-	$allowed_tags = _s_scaffolding_allowed_html();
+	$allowed_tags = harmonium_scaffolding_allowed_html();
 
 	// Add a unique class to the wrapper.
 	$class = 'scaffolding-' . str_replace( ' ', '-', strtolower( $args['title'] ) ); ?>
@@ -101,7 +101,7 @@ function _s_display_scaffolding_section( $args = array() ) {
  * @return array The allowed tags and attributes.
  * @author Carrie Forde
  */
-function _s_scaffolding_allowed_html() {
+function harmonium_scaffolding_allowed_html() {
 
 	// Add additional HTML tags to the wp_kses() allowed html filter.
 	$allowed_tags = array_merge(
@@ -162,7 +162,7 @@ function _s_scaffolding_allowed_html() {
  * @param array $args The array of colors or fonts.
  * @author Carrie Forde
  */
-function _s_display_global_scaffolding_section( $args = array() ) {
+function harmonium_display_global_scaffolding_section( $args = array() ) {
 
 	// Set defaults.
 	$defaults = array(
@@ -242,7 +242,7 @@ function _s_display_global_scaffolding_section( $args = array() ) {
  *
  * @author Carrie Forde
  */
-function _s_hook_theme_scaffolding() {
+function harmonium_hook_theme_scaffolding() {
 
 	$template_dir = 'template-parts/scaffolding/scaffolding';
 
@@ -254,4 +254,4 @@ function _s_hook_theme_scaffolding() {
 	get_template_part( $template_dir, 'forms' );
 	get_template_part( $template_dir, 'elements' );
 }
-add_action( '_s_scaffolding_content', '_s_hook_theme_scaffolding' );
+add_action( 'harmonium_scaffolding_content', 'harmonium_hook_theme_scaffolding' );

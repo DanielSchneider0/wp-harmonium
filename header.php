@@ -46,7 +46,7 @@
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 
-			<?php _s_display_header_button(); ?>
+			<?php harmonium_display_header_button(); ?>
 
 			<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'mobile' ) ) : ?>
 				<button type="button" class="off-canvas-open" aria-expanded="false" aria-label="<?php esc_html_e( 'Open Menu', 'harmonium' ); ?>">

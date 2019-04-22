@@ -17,7 +17,7 @@
  * @return array $args The query arguments.
  * @author Eric Fuller, Jeffrey de Wit
  */
-function _s_get_recent_posts_query_arguments( $categories, $tags ) {
+function harmonium_get_recent_posts_query_arguments( $categories, $tags ) {
 
 	$args = array();
 
@@ -64,7 +64,7 @@ function _s_get_recent_posts_query_arguments( $categories, $tags ) {
  * @return object        The related posts object.
  * @author Greg Rickaby, Eric Fuller, Jeffrey de Wit
  */
-function _s_get_recent_posts( $args = array() ) {
+function harmonium_get_recent_posts( $args = array() ) {
 
 	// Setup default WP_Query args.
 	$defaults = array(

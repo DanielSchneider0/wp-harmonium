@@ -13,7 +13,7 @@ $related_posts = get_sub_field( 'related_posts' );
 if ( $related_posts ) :
 
 	// Start a <container> with possible block options.
-	_s_display_block_options(
+	harmonium_display_block_options(
 		array(
 			'container' => 'section', // Any HTML5 container: section, div, etc...
 			'class'     => 'content-block related-posts-block', // Container class.
@@ -27,7 +27,7 @@ if ( $related_posts ) :
 			<?php endif; ?>
 		</div>
 
-		<div class="container display-flex<?php echo esc_attr( _s_get_animation_class() ); ?>">
+		<div class="container display-flex<?php echo esc_attr( harmonium_get_animation_class() ); ?>">
 
 			<?php
 			// Loop through recent posts.
@@ -37,11 +37,11 @@ if ( $related_posts ) :
 				setup_postdata( $post );
 
 						// Display a card.
-				_s_display_card(
+				harmonium_display_card(
 					array(
 						'title' => get_the_title(),
-						'image' => _s_get_post_image_url( 'medium' ),
-						'text'  => _s_get_the_excerpt(
+						'image' => harmonium_get_post_image_url( 'medium' ),
+						'text'  => harmonium_get_the_excerpt(
 							array(
 								'length' => 20,
 								'more'   => '...',
