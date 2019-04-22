@@ -18,7 +18,7 @@ get_header(); ?>
 
 			<div class="page-content">
 
-				<p><?php esc_html_e( 'It seems we can\'t find what you’re looking for. Perhaps searching can help.''harmonium's' ); ?></p>
+				<p><?php esc_html_e( 'It seems we can\'t find what you\'re looking for. Perhaps searching can help.', 'harmonium' ); ?></p>
 
 				<?php get_search_form(); ?>
 
