@@ -152,7 +152,7 @@ If you want to set me up manually:
 
 You'll need to change all instances of the names: `_s`.
 
-* Search for: `'_s'` and replace with: `'project-name'` (inside single quotations) to capture the text domain
+* Search for: `'harmonium'` and replace with: `'project-name'` (inside single quotations) to capture the text domain
 * Search for: `_s_` and replace with: `project-name_` to capture all the function names
 * Search for: `Text Domain: _s` and replace with: `Text Domain: project-name` in style.css
 * Search for (and include the leading space): <code>&nbsp;_s</code> and replace with: <code>&nbsp;Project Name</code> (with a space before it) to capture DocBlocks

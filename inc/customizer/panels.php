@@ -20,8 +20,8 @@ function _s_customize_panels( $wp_customize ) {
 			'priority'       => 10,
 			'capability'     => 'edit_theme_options',
 			'theme_supports' => '',
-			'title'          => esc_html__( 'Site Options', '_s' ),
-			'description'    => esc_html__( 'Other theme options.', '_s' ),
+			'title'          => esc_html__( 'Site Options', 'harmonium' ),
+			'description'    => esc_html__( 'Other theme options.', 'harmonium' ),
 		)
 	);
 }

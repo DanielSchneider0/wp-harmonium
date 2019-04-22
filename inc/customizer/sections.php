@@ -17,7 +17,7 @@ function _s_customize_sections( $wp_customize ) {
 	$wp_customize->add_section(
 		'_s_additional_scripts_section',
 		array(
-			'title'    => esc_html__( 'Additional Scripts', '_s' ),
+			'title'    => esc_html__( 'Additional Scripts', 'harmonium' ),
 			'priority' => 10,
 			'panel'    => 'site-options',
 		)
@@ -27,8 +27,8 @@ function _s_customize_sections( $wp_customize ) {
 	$wp_customize->add_section(
 		'_s_social_links_section',
 		array(
-			'title'       => esc_html__( 'Social Media', '_s' ),
-			'description' => esc_html__( 'Links here power the display_social_network_links() template tag.', '_s' ),
+			'title'       => esc_html__( 'Social Media', 'harmonium' ),
+			'description' => esc_html__( 'Links here power the display_social_network_links() template tag.', 'harmonium' ),
 			'priority'    => 90,
 			'panel'       => 'site-options',
 		)
@@ -38,7 +38,7 @@ function _s_customize_sections( $wp_customize ) {
 	$wp_customize->add_section(
 		'_s_header_section',
 		array(
-			'title'    => esc_html__( 'Header Customizations', '_s' ),
+			'title'    => esc_html__( 'Header Customizations', 'harmonium' ),
 			'priority' => 90,
 			'panel'    => 'site-options',
 		)
@@ -48,7 +48,7 @@ function _s_customize_sections( $wp_customize ) {
 	$wp_customize->add_section(
 		'_s_footer_section',
 		array(
-			'title'    => esc_html__( 'Footer Customizations', '_s' ),
+			'title'    => esc_html__( 'Footer Customizations', 'harmonium' ),
 			'priority' => 90,
 			'panel'    => 'site-options',
 		)

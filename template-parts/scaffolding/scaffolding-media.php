@@ -10,7 +10,7 @@ global $wp_embed;
 
 <section class="section-scaffolding">
 
-	<h2 class="scaffolding-heading"><?php esc_html_e( 'Media', '_s' ); ?></h2>
+	<h2 class="scaffolding-heading"><?php esc_html_e( 'Media', 'harmonium' ); ?></h2>
 
 	<?php
 	// Right-aligned Image.

@@ -26,8 +26,8 @@ function _s_customize_additional_scripts( $wp_customize ) {
 	$wp_customize->add_control(
 		'_s_header_scripts',
 		array(
-			'label'       => esc_html__( 'Header Scripts', '_s' ),
-			'description' => esc_html__( 'Additional scripts to add to the header. Basic HTML tags are allowed.', '_s' ),
+			'label'       => esc_html__( 'Header Scripts', 'harmonium' ),
+			'description' => esc_html__( 'Additional scripts to add to the header. Basic HTML tags are allowed.', 'harmonium' ),
 			'section'     => '_s_additional_scripts_section',
 			'type'        => 'textarea',
 		)
@@ -46,8 +46,8 @@ function _s_customize_additional_scripts( $wp_customize ) {
 	$wp_customize->add_control(
 		'_s_footer_scripts',
 		array(
-			'label'       => esc_html__( 'Footer Scripts', '_s' ),
-			'description' => esc_html__( 'Additional scripts to add to the footer. Basic HTML tags are allowed.', '_s' ),
+			'label'       => esc_html__( 'Footer Scripts', 'harmonium' ),
+			'description' => esc_html__( 'Additional scripts to add to the footer. Basic HTML tags are allowed.', 'harmonium' ),
 			'section'     => '_s_additional_scripts_section',
 			'type'        => 'textarea',
 		)
@@ -82,7 +82,7 @@ function _s_customize_social_icons( $wp_customize ) {
 		$wp_customize->add_control(
 			'_s_' . $network . '_link',
 			array(
-				'label'   => /* translators: the social network name. */ sprintf( esc_html__( '%s URL', '_s' ), ucwords( $network ) ),
+				'label'   => /* translators: the social network name. */ sprintf( esc_html__( '%s URL', 'harmonium' ), ucwords( $network ) ),
 				'section' => '_s_social_links_section',
 				'type'    => 'text',
 			)
@@ -113,8 +113,8 @@ function _s_customize_copyright_text( $wp_customize ) {
 			$wp_customize,
 			'_s_copyright_text',
 			array(
-				'label'       => esc_html__( 'Copyright Text', '_s' ),
-				'description' => esc_html__( 'The copyright text will be displayed in the footer. Basic HTML tags allowed.', '_s' ),
+				'label'       => esc_html__( 'Copyright Text', 'harmonium' ),
+				'description' => esc_html__( 'The copyright text will be displayed in the footer. Basic HTML tags allowed.', 'harmonium' ),
 				'section'     => '_s_footer_section',
 				'type'        => 'textarea',
 			)
@@ -144,14 +144,14 @@ function _s_customize_header_button( $wp_customize ) {
 	$wp_customize->add_control(
 		'_s_header_button',
 		array(
-			'label'       => esc_html__( 'Header Button', '_s' ),
-			'description' => esc_html__( 'Display a custom button in the header.', '_s' ),
+			'label'       => esc_html__( 'Header Button', 'harmonium' ),
+			'description' => esc_html__( 'Display a custom button in the header.', 'harmonium' ),
 			'section'     => '_s_header_section',
 			'type'        => 'select',
 			'choices'     => array(
-				'none'   => esc_html__( 'No button', '_s' ),
-				'search' => esc_html__( 'Trigger a search field', '_s' ),
-				'link'   => esc_html__( 'Link to a custom URL', '_s' ),
+				'none'   => esc_html__( 'No button', 'harmonium' ),
+				'search' => esc_html__( 'Trigger a search field', 'harmonium' ),
+				'link'   => esc_html__( 'Link to a custom URL', 'harmonium' ),
 			),
 		)
 	);
@@ -169,8 +169,8 @@ function _s_customize_header_button( $wp_customize ) {
 	$wp_customize->add_control(
 		'_s_header_button_url',
 		array(
-			'label'           => esc_html__( 'Header Button URL', '_s' ),
-			'description'     => esc_html__( 'Enter the URL or email address to be used by the button in the header.', '_s' ),
+			'label'           => esc_html__( 'Header Button URL', 'harmonium' ),
+			'description'     => esc_html__( 'Enter the URL or email address to be used by the button in the header.', 'harmonium' ),
 			'section'         => '_s_header_section',
 			'type'            => 'url',
 			'active_callback' => '_s_customizer_is_header_button_link', // Only displays if the Link option is selected above.
@@ -190,8 +190,8 @@ function _s_customize_header_button( $wp_customize ) {
 	$wp_customize->add_control(
 		'_s_header_button_text',
 		array(
-			'label'           => esc_html__( 'Header Button Text', '_s' ),
-			'description'     => esc_html__( 'Enter the text to be displayed in the button in the header.', '_s' ),
+			'label'           => esc_html__( 'Header Button Text', 'harmonium' ),
+			'description'     => esc_html__( 'Enter the text to be displayed in the button in the header.', 'harmonium' ),
 			'section'         => '_s_header_section',
 			'type'            => 'text',
 			'active_callback' => '_s_customizer_is_header_button_link', // Only displays if the Link option is selected above.

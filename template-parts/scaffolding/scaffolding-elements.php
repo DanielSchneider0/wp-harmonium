@@ -9,7 +9,7 @@
 
 <section class="section-scaffolding">
 
-	<h2 class="scaffolding-heading"><?php esc_html_e( 'Generic Elements', '_s' ); ?></h2>
+	<h2 class="scaffolding-heading"><?php esc_html_e( 'Generic Elements', 'harmonium' ); ?></h2>
 
 	<?php
 	// Right-aligned Image.

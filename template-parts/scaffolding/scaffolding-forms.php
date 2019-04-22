@@ -9,7 +9,7 @@
 
 <section class="section-scaffolding">
 
-	<h2 class="scaffolding-heading"><?php esc_html_e( 'Forms', '_s' ); ?></h2>
+	<h2 class="scaffolding-heading"><?php esc_html_e( 'Forms', 'harmonium' ); ?></h2>
 
 	<?php
 	// Search form.

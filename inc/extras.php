@@ -112,11 +112,11 @@ function _s_get_placeholder_unsplash( $args = array() ) {
 
 	// Perform some quick data validation.
 	if ( ! is_numeric( $args['width'] ) ) {
-		throw new Exception( esc_html__( 'Width must be an integer', '_s' ) );
+		throw new Exception( esc_html__( 'Width must be an integer', 'harmonium' ) );
 	}
 
 	if ( ! is_numeric( $args['height'] ) ) {
-		throw new Exception( esc_html__( 'Height must be an integer', '_s' ) );
+		throw new Exception( esc_html__( 'Height must be an integer', 'harmonium' ) );
 	}
 
 	// Set up the url to the image.
@@ -137,7 +137,7 @@ function _s_get_placeholder_unsplash( $args = array() ) {
 	}
 
 	// Text that will be utilized by screen readers.
-	$alt = apply_filters( '_s_placeholder_image_alt', esc_html__( 'WebDevStudios Placeholder Image', '_s' ) );
+	$alt = apply_filters( '_s_placeholder_image_alt', esc_html__( 'WebDevStudios Placeholder Image', 'harmonium' ) );
 
 	return "<img src='$url' width='{$args['width']}' height='{$args['height']}' alt='$alt' />";
 }

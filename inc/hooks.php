@@ -96,7 +96,7 @@ add_action( 'save_post', '_s_category_transient_flusher' );
  * @return string
  */
 function _s_content_more_link() {
-	return ' <a class="more-link" href="' . get_permalink() . '">' . esc_html__( 'Read More', '_s' ) . '...</a>';
+	return ' <a class="more-link" href="' . get_permalink() . '">' . esc_html__( 'Read More', 'harmonium' ) . '...</a>';
 }
 add_filter( 'the_content_more_link', '_s_content_more_link' );
 
@@ -108,7 +108,7 @@ add_filter( 'the_content_more_link', '_s_content_more_link' );
  * @return string
  */
 function _s_excerpt_more( $more ) {
-	return sprintf( ' <a class="more-link" href="%1$s">%2$s</a>', get_permalink( get_the_ID() ), esc_html__( 'Read more...', '_s' ) );
+	return sprintf( ' <a class="more-link" href="%1$s">%2$s</a>', get_permalink( get_the_ID() ), esc_html__( 'Read more...', 'harmonium' ) );
 }
 add_filter( 'excerpt_more', '_s_excerpt_more' );
 
@@ -208,7 +208,7 @@ function _s_add_og_tags() {
 	$default_url = get_permalink();
 
 	// Set our base description.
-	$default_base_description = ( get_bloginfo( 'description' ) ) ? get_bloginfo( 'description' ) : esc_html__( 'Visit our website to learn more.', '_s' );
+	$default_base_description = ( get_bloginfo( 'description' ) ) ? get_bloginfo( 'description' ) : esc_html__( 'Visit our website to learn more.', 'harmonium' );
 
 	// Set the card type.
 	$default_type = 'article';
@@ -248,13 +248,13 @@ function _s_add_og_tags() {
 
 		$term_name      = single_term_title( '', false );
 		$card_title     = $term_name . ' - ' . $default_title;
-		$specify        = ( is_category() ) ? esc_html__( 'categorized in', '_s' ) : esc_html__( 'tagged with', '_s' );
+		$specify        = ( is_category() ) ? esc_html__( 'categorized in', 'harmonium' ) : esc_html__( 'tagged with', 'harmonium' );
 		$queried_object = get_queried_object();
 		$card_url       = get_term_link( $queried_object );
 		$card_type      = 'website';
 
 		// Translators: get the term name.
-		$card_long_description = $card_description = sprintf( esc_html__( 'Posts %1$s %2$s.', '_s' ), $specify, $term_name );
+		$card_long_description = $card_description = sprintf( esc_html__( 'Posts %1$s %2$s.', 'harmonium' ), $specify, $term_name );
 	}
 
 	// Search results.
@@ -266,7 +266,7 @@ function _s_add_og_tags() {
 		$card_type   = 'website';
 
 		// Translators: get the search term.
-		$card_long_description = $card_description = sprintf( esc_html__( 'Search results for %s.', '_s' ), $search_term );
+		$card_long_description = $card_description = sprintf( esc_html__( 'Search results for %s.', 'harmonium' ), $search_term );
 	}
 
 	if ( is_home() ) {

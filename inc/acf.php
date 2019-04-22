@@ -105,7 +105,7 @@ function _s_display_block_options( $args = array() ) {
 			$background_title      = $background_options['background_video_title'];
 			$args['class']        .= ' has-background video-as-background' . esc_attr( $has_show_overlay );
 			// Translators: get the title of the video.
-			$background_alt = $background_title ? sprintf( esc_attr( 'Video Background of %s', '_s' ), esc_attr( $background_options['background_video_title'] ) ) : __( 'Video Background', '_s' );
+			$background_alt = $background_title ? sprintf( esc_attr( 'Video Background of %s', 'harmonium' ), esc_attr( $background_options['background_video_title'] ) ) : __( 'Video Background', 'harmonium' );
 
 			ob_start();
 			?>
@@ -118,7 +118,7 @@ function _s_display_block_options( $args = array() ) {
 						<source src="<?php echo esc_url( $background_video['url'] ); ?>" type="video/mp4">
 						<?php endif; ?>
 				</video>
-				<button class="video-toggle"><span class="screen-reader-text"><?php esc_html_e( 'Toggle video playback', '_s' ); ?></span></button>
+				<button class="video-toggle"><span class="screen-reader-text"><?php esc_html_e( 'Toggle video playback', 'harmonium' ); ?></span></button>
 			<?php
 			$background_video_markup = ob_get_clean();
 		}
@@ -285,7 +285,7 @@ function _s_acf_flexible_content_layout_title( $block_title, $field, $layout, $i
 		}
 
 		if ( 'video' === $background_type ) {
-			$block_heading .= '<div style="font-size: 30px; height: 26px; width: 30px;" class="dashicons dashicons-format-video acf-flexible-title-image"><span class="screen-reader-text">' . esc_html__( 'Video', '_s' ) . '</span></div>';
+			$block_heading .= '<div style="font-size: 30px; height: 26px; width: 30px;" class="dashicons dashicons-format-video acf-flexible-title-image"><span class="screen-reader-text">' . esc_html__( 'Video', 'harmonium' ) . '</span></div>';
 		}
 	}
 
@@ -307,7 +307,7 @@ function _s_acf_flexible_content_layout_title( $block_title, $field, $layout, $i
 			)
 		)
 	) {
-		$expired .= '<span style="color: red;">&nbsp;(' . esc_html__( 'expired', '_s' ) . ')</span>';
+		$expired .= '<span style="color: red;">&nbsp;(' . esc_html__( 'expired', 'harmonium' ) . ')</span>';
 	}
 
 	// Load title field text else Load headline text — Hero.
@@ -410,20 +410,20 @@ add_filter( 'acf/load_field/name=color_picker', '_s_acf_load_color_picker_field_
  */
 function _s_get_theme_colors() {
 	return array(
-		esc_html__( 'Alto', '_s' )           => '#ddd',
-		esc_html__( 'Black', '_s' )          => '#000',
-		esc_html__( 'Blue', '_s' )           => '#21759b',
-		esc_html__( 'Cod Gray', '_s' )       => '#111',
-		esc_html__( 'Dove Gray', '_s' )      => '#666',
-		esc_html__( 'Gallery', '_s' )        => '#eee',
-		esc_html__( 'Gray', '_s' )           => '#808080',
-		esc_html__( 'Gray Alt', '_s' )       => '#929292',
-		esc_html__( 'Light Yellow', '_s' )   => '#fff9c0',
-		esc_html__( 'Mineshaft', '_s' )      => '#333',
-		esc_html__( 'Silver', '_s' )         => '#ccc',
-		esc_html__( 'Silver Chalice', '_s' ) => '#aaa',
-		esc_html__( 'White', '_s' )          => '#fff',
-		esc_html__( 'Whitesmoke', '_s' )     => '#f1f1f1',
+		esc_html__( 'Alto', 'harmonium' )           => '#ddd',
+		esc_html__( 'Black', 'harmonium' )          => '#000',
+		esc_html__( 'Blue', 'harmonium' )           => '#21759b',
+		esc_html__( 'Cod Gray', 'harmonium' )       => '#111',
+		esc_html__( 'Dove Gray', 'harmonium' )      => '#666',
+		esc_html__( 'Gallery', 'harmonium' )        => '#eee',
+		esc_html__( 'Gray', 'harmonium' )           => '#808080',
+		esc_html__( 'Gray Alt', 'harmonium' )       => '#929292',
+		esc_html__( 'Light Yellow', 'harmonium' )   => '#fff9c0',
+		esc_html__( 'Mineshaft', 'harmonium' )      => '#333',
+		esc_html__( 'Silver', 'harmonium' )         => '#ccc',
+		esc_html__( 'Silver Chalice', 'harmonium' ) => '#aaa',
+		esc_html__( 'White', 'harmonium' )          => '#fff',
+		esc_html__( 'Whitesmoke', 'harmonium' )     => '#f1f1f1',
 	);
 }
 
@@ -499,7 +499,7 @@ function _s_get_link( $args = array() ) {
 	$classes .= ' ' . $args['class'];
 
 	// Get title else default to "Read More".
-	$title = _s_has_array_key( 'title', $button_array ) ? $button_array['title'] : esc_html__( 'Read More', '_s' );
+	$title = _s_has_array_key( 'title', $button_array ) ? $button_array['title'] : esc_html__( 'Read More', 'harmonium' );
 
 	// Get url.
 	$url = _s_has_array_key( 'url', $button_array ) ? $button_array['url'] : '';

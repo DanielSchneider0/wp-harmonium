@@ -295,8 +295,8 @@ gulp.task( 'wp-pot', [ 'clean:pot' ], () =>
 		.pipe( plumber( {'errorHandler': handleErrors} ) )
 		.pipe( sort() )
 		.pipe( wpPot( {
-			'domain': '_s',
-			'package': '_s'
+			'domain': 'harmonium',
+			'package': 'harmonium'
 		} ) )
 		.pipe( gulp.dest( 'languages/_s.pot' ) )
 );

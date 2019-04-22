@@ -31,7 +31,7 @@
 					sprintf(
 						wp_kses(
 							/* translators: %s: Name of current post. */
-							__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', '_s' ),
+							__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'harmonium' ),
 							array(
 								'span' => array(
 									'class' => array(),
@@ -44,7 +44,7 @@
 
 				wp_link_pages(
 					array(
-						'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'harmonium' ),
 						'after'  => '</div>',
 					)
 				);

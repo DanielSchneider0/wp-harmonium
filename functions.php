@@ -22,11 +22,11 @@ if ( ! function_exists( '_s_setup' ) ) :
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on _s, use a find and replace
-		 * to change '_s' to the name of your theme in all the template files.
+		 * to change 'harmonium' to the name of your theme in all the template files.
 		 * You will also need to update the Gulpfile with the new text domain
 		 * and matching destination POT file.
 		 */
-		load_theme_textdomain( '_s', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'harmonium', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -50,8 +50,8 @@ if ( ! function_exists( '_s_setup' ) ) :
 		// Register navigation menus.
 		register_nav_menus(
 			array(
-				'primary' => esc_html__( 'Primary Menu', '_s' ),
-				'mobile'  => esc_html__( 'Mobile Menu', '_s' ),
+				'primary' => esc_html__( 'Primary Menu', 'harmonium' ),
+				'mobile'  => esc_html__( 'Mobile Menu', 'harmonium' ),
 			)
 		);
 
@@ -108,22 +108,22 @@ if ( ! function_exists( '_s_setup' ) ) :
 			'editor-font-sizes',
 			array(
 				array(
-					'name' => __( 'Small', '_s' ),
+					'name' => __( 'Small', 'harmonium' ),
 					'size' => 12,
 					'slug' => 'small',
 				),
 				array(
-					'name' => __( 'Normal', '_s' ),
+					'name' => __( 'Normal', 'harmonium' ),
 					'size' => 16,
 					'slug' => 'normal',
 				),
 				array(
-					'name' => __( 'Large', '_s' ),
+					'name' => __( 'Large', 'harmonium' ),
 					'size' => 36,
 					'slug' => 'large',
 				),
 				array(
-					'name' => __( 'Huge', '_s' ),
+					'name' => __( 'Huge', 'harmonium' ),
 					'size' => 50,
 					'slug' => 'huge',
 				),
@@ -163,7 +163,7 @@ function _s_widgets_init() {
 
 	// Define sidebars.
 	$sidebars = array(
-		'sidebar-1' => esc_html__( 'Sidebar 1', '_s' ),
+		'sidebar-1' => esc_html__( 'Sidebar 1', 'harmonium' ),
 	);
 
 	// Loop through each sidebar and register.
@@ -172,7 +172,7 @@ function _s_widgets_init() {
 			array(
 				'name'          => $sidebar_name,
 				'id'            => $sidebar_id,
-				'description'   => /* translators: the sidebar name */ sprintf( esc_html__( 'Widget area for %s', '_s' ), $sidebar_name ),
+				'description'   => /* translators: the sidebar name */ sprintf( esc_html__( 'Widget area for %s', 'harmonium' ), $sidebar_name ),
 				'before_widget' => '<aside class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h2 class="widget-title">',

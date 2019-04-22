@@ -23,7 +23,7 @@
 </head>
 
 <body <?php body_class( 'site-wrapper' ); ?>>
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'harmonium' ); ?></a>
 
 	<header class="site-header background-gallery">
 		<div class="display-flex container">
@@ -49,13 +49,13 @@
 			<?php _s_display_header_button(); ?>
 
 			<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'mobile' ) ) : ?>
-				<button type="button" class="off-canvas-open" aria-expanded="false" aria-label="<?php esc_html_e( 'Open Menu', '_s' ); ?>">
+				<button type="button" class="off-canvas-open" aria-expanded="false" aria-label="<?php esc_html_e( 'Open Menu', 'harmonium' ); ?>">
 					<span class="hamburger"></span>
 				</button>
 			<?php endif; ?>
 		</div><!-- .container -->
 
-		<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', '_s' ); ?>">
+		<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'harmonium' ); ?>">
 			<?php
 			wp_nav_menu(
 				array(

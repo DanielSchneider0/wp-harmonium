@@ -29,13 +29,13 @@ if ( ! function_exists( '_s_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: the date the post was published */
-			esc_html_x( 'Posted on %s', 'post date', '_s' ),
+			esc_html_x( 'Posted on %s', 'post date', 'harmonium' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
 		$byline = sprintf(
 			/* translators: the post author */
-			esc_html_x( 'by %s', 'post author', '_s' ),
+			esc_html_x( 'by %s', 'post author', 'harmonium' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -54,30 +54,30 @@ if ( ! function_exists( '_s_entry_footer' ) ) :
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', '_s' ) );
+			$categories_list = get_the_category_list( esc_html__( ', ', 'harmonium' ) );
 			if ( $categories_list && _s_categorized_blog() ) {
 				/* translators: the post category */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', '_s' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'harmonium' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html__( ', ', '_s' ) );
+			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'harmonium' ) );
 			if ( $tags_list ) {
 				/* translators: the post tags */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', '_s' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'harmonium' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
-			comments_popup_link( esc_html__( 'Leave a comment', '_s' ), esc_html__( '1 Comment', '_s' ), esc_html__( '% Comments', '_s' ) );
+			comments_popup_link( esc_html__( 'Leave a comment', 'harmonium' ), esc_html__( '1 Comment', 'harmonium' ), esc_html__( '% Comments', 'harmonium' ) );
 			echo '</span>';
 		}
 
 		edit_post_link(
 			sprintf(
 				/* translators: %s: Name of current post */
-				esc_html__( 'Edit %s', '_s' ),
+				esc_html__( 'Edit %s', 'harmonium' ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			),
 			'<span class="edit-link">',
@@ -108,12 +108,12 @@ function _s_get_svg( $args = array() ) {
 
 	// Make sure $args are an array.
 	if ( empty( $args ) ) {
-		return esc_html__( 'Please define default parameters in the form of an array.', '_s' );
+		return esc_html__( 'Please define default parameters in the form of an array.', 'harmonium' );
 	}
 
 	// Define an icon.
 	if ( false === array_key_exists( 'icon', $args ) ) {
-		return esc_html__( 'Please define an SVG icon filename.', '_s' );
+		return esc_html__( 'Please define an SVG icon filename.', 'harmonium' );
 	}
 
 	// Set defaults.
@@ -409,7 +409,7 @@ function _s_display_social_network_links() {
 						?>
 						<span class="screen-reader-text">
 						<?php
-							echo /* translators: the social network name */ sprintf( esc_html( 'Link to %s', '_s' ), ucwords( esc_html( $network ) ) ); // WPCS: XSS OK.
+							echo /* translators: the social network name */ sprintf( esc_html( 'Link to %s', 'harmonium' ), ucwords( esc_html( $network ) ) ); // WPCS: XSS OK.
 						?>
 						</span>
 					</a>
@@ -459,7 +459,7 @@ function _s_display_card( $args = array() ) {
 		<?php endif; ?>
 
 		<?php if ( $args['url'] ) : ?>
-			<a class="button button-card" href="<?php echo esc_url( $args['url'] ); ?>"><?php esc_html_e( 'Read More', '_s' ); ?></a>
+			<a class="button button-card" href="<?php echo esc_url( $args['url'] ); ?>"><?php esc_html_e( 'Read More', 'harmonium' ); ?></a>
 		<?php endif; ?>
 
 		</div><!-- .card-section -->
@@ -493,10 +493,10 @@ function _s_display_header_button() {
 		// If we're doing a URL, just make this LOOK like a button but be a link.
 		if ( 'link' === $button_setting && $button_url ) :
 		?>
-			<a href="<?php echo esc_url( $button_url ); ?>" class="button button-link"><?php echo esc_html( $button_text ?: __( 'More Information', '_s' ) ); ?></a>
+			<a href="<?php echo esc_url( $button_url ); ?>" class="button button-link"><?php echo esc_html( $button_text ?: __( 'More Information', 'harmonium' ) ); ?></a>
 		<?php else : ?>
-			<button type="button" class="cta-button" aria-expanded="false" aria-label="<?php esc_html_e( 'Search', '_s' ); ?>">
-				<?php esc_html_e( 'Search', '_s' ); ?>
+			<button type="button" class="cta-button" aria-expanded="false" aria-label="<?php esc_html_e( 'Search', 'harmonium' ); ?>">
+				<?php esc_html_e( 'Search', 'harmonium' ); ?>
 			</button>
 			<div class="form-container">
 				<?php get_search_form(); ?>
@@ -532,7 +532,7 @@ function _s_display_numeric_pagination( $args = array() ) {
 	}
 	?>
 
-	<nav class="pagination-container container" aria-label="<?php esc_html_e( 'numeric pagination', '_s' ); ?>">
+	<nav class="pagination-container container" aria-label="<?php esc_html_e( 'numeric pagination', 'harmonium' ); ?>">
 		<?php echo paginate_links( $args ); // WPCS: XSS OK. ?>
 	</nav>
 
@@ -563,8 +563,8 @@ function _s_display_mobile_menu() {
 	}
 	?>
 	<div class="off-canvas-screen"></div>
-	<nav class="off-canvas-container" aria-label="<?php esc_html_e( 'Mobile Menu', '_s' ); ?>" aria-hidden="true" tabindex="-1">
-		<button type="button" class="off-canvas-close" aria-label="<?php esc_html_e( 'Close Menu', '_s' ); ?>">
+	<nav class="off-canvas-container" aria-label="<?php esc_html_e( 'Mobile Menu', 'harmonium' ); ?>" aria-hidden="true" tabindex="-1">
+		<button type="button" class="off-canvas-close" aria-label="<?php esc_html_e( 'Close Menu', 'harmonium' ); ?>">
 			<span class="close"></span>
 		</button>
 		<?php

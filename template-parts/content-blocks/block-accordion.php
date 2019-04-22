@@ -29,7 +29,7 @@ _s_display_block_options(
 		<?php endif; ?>
 
 		<?php if ( $accordion_items ) : ?>
-			<div class="accordion" aria-label="<?php esc_attr_e( 'Accordion Content Block', '_s' ); ?>">
+			<div class="accordion" aria-label="<?php esc_attr_e( 'Accordion Content Block', 'harmonium' ); ?>">
 				<?php
 				$count = 0;
 				while ( have_rows( 'accordion_items' ) ) :
@@ -44,7 +44,7 @@ _s_display_block_options(
 							<div class="accordion-item-header">
 								<h3 class="accordion-item-title"><?php echo esc_html( $item_title ); ?>
 									<button class="accordion-item-toggle" aria-expanded="false" aria-controls="<?php echo esc_attr( $item_content_id ); ?>">
-										<span class="screen-reader-text"><?php echo sprintf( esc_html( 'Toggle %s', '_s' ), esc_html( $item_title ) ); ?></span>
+										<span class="screen-reader-text"><?php echo sprintf( esc_html( 'Toggle %s', 'harmonium' ), esc_html( $item_title ) ); ?></span>
 										<span class="accordion-item-toggle-icon" aria-hidden="true">+</span>
 									</button>
 								</h3>
