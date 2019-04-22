@@ -282,7 +282,7 @@ gulp.task( 'uglify', [ 'concat' ], () =>
  * Delete the theme's .pot before we create a new one.
  */
 gulp.task( 'clean:pot', () =>
-	del( [ 'languages/_s.pot' ] )
+	del( [ 'languages/harmonium.pot' ] )
 );
 
 /**
@@ -298,7 +298,7 @@ gulp.task( 'wp-pot', [ 'clean:pot' ], () =>
 			'domain': 'harmonium',
 			'package': 'harmonium'
 		} ) )
-		.pipe( gulp.dest( 'languages/_s.pot' ) )
+		.pipe( gulp.dest( 'languages/harmonium.pot' ) )
 );
 
 /**
