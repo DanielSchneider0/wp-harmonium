@@ -181,7 +181,6 @@ NPM
 ```bash
 npm install && bower install
 ```
-![Install and Gulp](https://dl.dropboxusercontent.com/s/cj1p6xjz51cpckq/wd_s-install.gif?dl=0)
 
 ### Gulp Tasks
 
