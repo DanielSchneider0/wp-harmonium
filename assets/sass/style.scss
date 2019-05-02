@@ -18,8 +18,8 @@ Based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc.
 //-----------------------------------------
 // Harmonium
 //-----------------------------------------
-@import 'vendor/harmonium/color-palette';
-@import 'vendor/harmonium/harmonium-settings.scss';
+@import 'utilities/variables/color-palette';
+@import 'utilities/variables/harmonium-settings.scss';
 @import '../../node_modules/harmonium/scss/app';
 
 //-----------------------------------------
