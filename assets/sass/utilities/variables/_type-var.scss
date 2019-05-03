@@ -8,19 +8,19 @@
 ////
 
 /// Define sans font.
-$font-sans: 'Open Sans', sans-serif;
+$font-sans: $global-sans-serif-font;
 
 /// Define serif font.
-$font-serif: Roboto, Georgia, Times, 'Times New Roman', serif;
+$font-serif: $global-serif-font;
 
 /// Define monospace font.
-$font-code: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
+$font-code: $global-monospace-font;
 
 /// Define pre font.
-$font-pre: 'Courier 10 Pitch', Courier, monospace;
+$font-pre: $global-monospace-font;
 
 /// Define global line-height.
-$line-height-body: lh(26, 16);
+$line-height-body: $global-lineheight;
 
 /// Define line-height for `<pre>`.
-$line-height-pre: $line-height-body;
+$line-height-pre: 1;

@@ -8,25 +8,25 @@
 ////
 
 /// Larger HD Desktops.
-$desktop-large: 1800px;
+$desktop-large: $xxlarge;
 
 /// Standard Desktops and Larger Laptops.
-$desktop: 1200px;
+$desktop: $xlarge;
 
 /// Container width.
-$container: 1170px;
+$container: $large;
 
 /// Container width, $contaner plus $gutter padding.
-$container-offset: 1194px;
+$container-offset: calc(#{$large} + #{$grid-gutter});
 
 /// Smaller Desktops and Standard iPad Tablet.
-$tablet-landscape: 900px;
+$tablet-landscape: $large;
 
 /// Breakpoint for WP Admin Bar.
 $wp-admin-bar: 783px;
 
 /// Smaller Tablets and Standard iPad Portrait.
-$tablet-portrait: 600px;
+$tablet-portrait: $medium;
 
 /// Phones Smaller Than 500px in Width.
 $phone: 300px;
@@ -34,16 +34,16 @@ $phone: 300px;
 //-----------------------------------------
 // Numeric values for padding/margin helper classes.
 //-----------------------------------------
-$spacing-options: 15, 20, 30, 35, 40, 50, 100;
+$spacing-options: 12, 24, 30, 42, 48, 72, 96;
 
 //-----------------------------------------
 // Default width of the gutters
 // Used for padding on mobile.
 //-----------------------------------------
-$gutter: rem(20);
+$gutter: $grid-gutter;
 
 //-----------------------------------------
 // Spacer
 // Utilized anywhere spacing is set.
 //-----------------------------------------
-$space: rem(24);
+$space: $global-horizontal-space;

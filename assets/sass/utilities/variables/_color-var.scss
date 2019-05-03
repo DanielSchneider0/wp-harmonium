@@ -34,25 +34,26 @@
 //-----------------------------------------
 // Primary Colors
 //-----------------------------------------
-$color-black:        #000;
+$color-black:        $black;
 $color-blue:         #20739a;
 $color-light-yellow: #fff9c0;
-$color-white:        #fff;
+$color-white:        $white;
 
 //-----------------------------------------
 // Grayscale Colors
 //-----------------------------------------
-$color-alto:           #ddd;
-$color-cod-gray:       #111;
-$color-dove-gray:      #666;
-$color-gallery:        #eee;
-$color-gray-alt:       #929292;
-$color-gray:           #808080;
-$color-mineshaft:      #333;
-$color-silver-chalice: #aaa;
-$color-silver:         #ccc;
-$color-tundora:        #454545;
-$color-whitesmoke:     #f1f1f1;
+$color-whitesmoke:     $lightest-gray;
+$color-gallery:        $lightest-gray;
+$color-alto:           $lighter-gray;
+$color-silver:         $light-gray;
+$color-silver-chalice: $gray;
+
+$color-gray-alt:       $gray;
+$color-gray:           $gray;
+$color-dove-gray:      $dark-gray;
+$color-tundora:        $dark-gray;
+$color-mineshaft:      $darker-gray;
+$color-cod-gray:       $darker-gray;
 
 //-----------------------------------------
 // Social Media Colors
@@ -75,34 +76,34 @@ $color-youtube:   #b00;
 //-----------------------------------------
 
 /// Background color.
-$color-background-body: $color-white;
+$color-background-body: $white;
 
 /// Main text color.
-$color-text-main: $color-cod-gray;
+$color-text-main: $body-font-color;
 
 /// Pre Background color.
-$color-background-pre: $color-whitesmoke;
+$color-background-pre: $lighter-gray;
 
 /// Pre Border color.
-$color-border-pre: $color-silver;
+$color-border-pre: $divider-color;
 
 /// Pre text color.
-$color-text-pre:  $color-gray;
+$color-text-pre:  $gray;
 
 /// Code background color.
-$color-background-code: $color-alto;
+$color-background-code: $darker-gray;
 
 /// Horizontal Rule.
-$color-background-hr: $color-silver;
+$color-background-hr: $divider-color;
 
 /// Abbreviations.
-$color-border-abbr: $color-dove-gray;
+$color-border-abbr: $divider-color;
 
 /// Box shadows.
-$color-box-shadow: rgba($color-black, 0.5);
+$color-box-shadow: rgba($black, 0.5);
 
 /// Overlays.
-$color-overlay: rgba($color-black, 0.3);
+$color-overlay: rgba($black, 0.3);
 
 
 //-----------------------------------------
@@ -110,10 +111,10 @@ $color-overlay: rgba($color-black, 0.3);
 //-----------------------------------------
 
 /// Screen reader background color.
-$color-background-screen-reader: $color-whitesmoke;
+$color-background-screen-reader: $white;
 
 /// Screen reader text color.
-$color-text-screen-reader: $color-blue;
+$color-text-screen-reader: $body-font-color;
 
 
 //-----------------------------------------
@@ -121,16 +122,16 @@ $color-text-screen-reader: $color-blue;
 //-----------------------------------------
 
 /// Links.
-$color-link: $color-blue;
+$color-link: $anchor-color;
 
 /// Visited Links.
-$color-link-visited: $color-blue;
+$color-link-visited: $anchor-color;
 
 /// Hovered Links.
-$color-link-hover: $color-blue;
+$color-link-hover: $anchor-color-hover;
 
 /// Focus LInks.
-$color-link-focus: $color-blue;
+$color-link-focus: $anchor-color-active;
 
 
 //-----------------------------------------
@@ -138,22 +139,22 @@ $color-link-focus: $color-blue;
 //-----------------------------------------
 
 /// Button background.
-$color-background-button: $color-dove-gray;
+$color-background-button: $button-bkgd;
 
 /// Button background on hover.
-$color-background-button-hover: $color-mineshaft;
+$color-background-button-hover: $button-bkgd-hover;
 
 /// Button text.
-$color-text-button: $color-white;
+$color-text-button: $button-color;
 
 /// Input border.
-$color-border-input: $color-silver;
+$color-border-input: $divider-color;
 
 /// Input focused color.
-$color-focus-text-input: $color-cod-gray;
+$color-focus-text-input: $input-color-focus;
 
 /// Input text.
-$color-text-input: $color-dove-gray;
+$color-text-input: $input-color;
 
 
 //-----------------------------------------
@@ -161,7 +162,7 @@ $color-text-input: $color-dove-gray;
 //-----------------------------------------
 
 /// CTA Link Color.
-$color-cta-link: $color-white;
+$color-cta-link: $button-color;
 
 
 //-----------------------------------------
@@ -169,7 +170,7 @@ $color-cta-link: $color-white;
 //-----------------------------------------
 
 /// Table borders.
-$color-border-table: $color-silver;
+$color-border-table: $divider-color;
 
 
 //-----------------------------------------
@@ -177,13 +178,13 @@ $color-border-table: $color-silver;
 //-----------------------------------------
 
 /// Modal Content Background.
-$color-background-modal: $color-white;
+$color-background-modal: $modal-content-bkgd;
 
 /// Modal Close Background.
-$color-background-modal-close: $color-black;
+$color-background-modal-close: $darker-gray;
 
 /// Modal Close Colors.
-$color-modal-close: $color-white;
+$color-modal-close: $white;
 
 
 //-----------------------------------------
@@ -191,10 +192,10 @@ $color-modal-close: $color-white;
 //-----------------------------------------
 
 /// Close Icon Background.
-$color-background-icon-close: $color-cod-gray;
+$color-background-icon-close: $darker-gray;
 
 /// Down Arrow Background Color.
-$color-background-down-arrow: $color-link;
+$color-background-down-arrow: $anchor-color;
 
 
 //-----------------------------------------
@@ -202,25 +203,25 @@ $color-background-down-arrow: $color-link;
 //-----------------------------------------
 
 /// Comment border.
-$color-border-comment: $color-silver;
+$color-border-comment: $divider-color;
 
 /// Comment focus border.
-$color-border-comment-focus: $color-mineshaft;
+$color-border-comment-focus: $darker-gray;
 
 /// Comment even background.
-$color-background-even: $color-gallery;
+$color-background-even: $lightest-gray;
 
 /// Comment odd background.
-$color-background-odd: $color-whitesmoke;
+$color-background-odd: $white;
 
 /// Comment response background.
-$color-comment-response: $color-white;
+$color-comment-response: $white;
 
 /// Comment meta links.
-$color-meta-links: $color-tundora;
+$color-meta-links: $anchor-color;
 
 /// Comment post author background.
-$color-background-author: $color-light-yellow;
+$color-background-author: $brand-secondary;
 
 
 //-----------------------------------------
@@ -228,10 +229,10 @@ $color-background-author: $color-light-yellow;
 //-----------------------------------------
 
 /// Block button background.
-$color-background-block-button: $color-mineshaft;
+$color-background-block-button: $button-bkgd;
 
 /// BLock pullquote.
-$color-border-block: $color-silver;
+$color-border-block: $lightest-gray;
 
 
 //-----------------------------------------
@@ -239,19 +240,19 @@ $color-border-block: $color-silver;
 //-----------------------------------------
 
 /// Mobile menu link.
-$color-mobile-menu-link: $color-link;
+$color-mobile-menu-link: $anchor-color;
 
 /// Hamburger background.
-$color-background-hamburger: $color-cod-gray;
+$color-background-hamburger: $topbar-bkgd;
 
 /// Off-canvas Container Background.
-$color-background-off-canvas: $color-whitesmoke;
+$color-background-off-canvas: $topbar-bkgd;
 
 /// Off-canvas Screen Background.
-$color-background-off-canvas-screen: $color-black;
+$color-background-off-canvas-screen: $black;
 
 /// Submenu Background.
-$color-background-submenu: $color-white;
+$color-background-submenu: $topbar-bkgd;
 
 
 //-----------------------------------------
@@ -259,16 +260,16 @@ $color-background-submenu: $color-white;
 //-----------------------------------------
 
 /// Scaffolding header border.
-$color-border-scaffolding: $color-alto;
+$color-border-scaffolding: $lightest-gray;
 
 /// Scaffolding swatch border.
-$color-border-scaffolding-swatch: $color-alto;
+$color-border-scaffolding-swatch: $lightest-gray;
 
 /// Scaffolding color.
-$color-scaffolding: $color-alto;
+$color-scaffolding: $lightest-gray;
 
 /// Scaffolding background color.
-$color-background-scaffolding: $color-white;
+$color-background-scaffolding: $white;
 
 //-----------------------------------------
 // Sass Map for Theme Colors
