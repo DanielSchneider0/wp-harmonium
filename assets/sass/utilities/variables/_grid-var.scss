@@ -14,10 +14,10 @@ $desktop-large: $xxlarge;
 $desktop: $xlarge;
 
 /// Container width.
-$container: $large;
+$container: $xlarge;
 
 /// Container width, $contaner plus $gutter padding.
-$container-offset: calc(#{$large} + #{$grid-gutter});
+$container-offset: calc(#{$xlarge} + #{$grid-gutter});
 
 /// Smaller Desktops and Standard iPad Tablet.
 $tablet-landscape: $large;
