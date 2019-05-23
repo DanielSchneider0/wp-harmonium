@@ -52,7 +52,7 @@ Each time a new WordPress project is started at Revelry, a developer spends valu
 
 ### What is the core loop?
 
-Developers at Revelry will use the new Harmonium and the [companion child theme](https://github.com/revelrylabs/wp-harmonium-child) as the basis for future WordPress-based projects. As we work on new projects, this theme will act as the parent theme and will not be altered on a site-by-site basis. Instead, all site specific work will be done in the child theme. Changes needed in the parent theme will be done to the global parent theme so they can be pushed to all active projects using it.
+Developers at Revelry will use the new Harmonium theme as the basis for future WordPress-based projects. As we work on new projects, this theme will act as the starter theme. As we work on individual projects, changes that we feel should be made part of our starter theme will be pushed upstream to this starter theme.
 
 ## Nouns & Verbs
 
@@ -60,7 +60,6 @@ Developers at Revelry will use the new Harmonium and the [companion child theme]
 - *Harmonium*: A React based asset library for adding consistant, yet flexible elements to a website
 - *Harmonium Theme*: The WordPress theme we are building to be used as the starting point for future WordPress projects.
 - *Parent Theme*: A WordPress theme that can be used as a framework and should not be edited directly so that the theme can be overwritten with an updated version without losing customizations.
-- *Child Theme*: A WordPress theme that uses another theme as a base and allows for the parent theme to be updated without losing customizations made to the theme. 
 - *Theme*: A collection of files that dictates how a website will look when viewed in a browser.
 - *Page*: Static content on a website. For example, the Contact Us or About Us page on a site. These are considered static pages as they are not based on a specific date.
 - *Post*: Chronological content on a website are considered posts. For example, a blog or latest news would be considered a post.
@@ -78,12 +77,14 @@ Tech Lead | John Hawkins | john.hawkins@revelry.co |
 Engineer | John Hawkins | john.hawkins@revelry.co |
 Designer | Laura Hill | laura@revelry.co |
 QA | |
-Business Analyst | Ann Diab | ann@revelry.co |
+Business Analyst |  |  |
 Account Manager |  |
 
 ## Important Note
 
-Please keep in mind that this theme is a Parent Theme and should be used in conjunction with the [WP-Harmonium Child](https://github.com/revelrylabs/wp-harmonium-child) theme. The Parent Theme (this theme) should be installed, but not activated. The Child theme should be installed and be the active theme on the website. For more information, please visit [Starting a New Project](http://wiki.revelry.co/index.php/Wordpress#Starting_a_New_Project) section on the Rev Wiki WordPress page.
+This repo and the instructions to follow are related to working on the WP Harmonium starter theme. DO NOT push website project specific code to this repo.
+
+For complete information on starting a new WordPress project, please visit the [Starting a New Project](http://wiki.revelry.co/index.php/Wordpress#Starting_a_New_Project) section on the Rev Wiki WordPress page.
 
 ## Project Setup
 
@@ -91,7 +92,7 @@ This repo is not a complete WordPress install. It only consists of the Harmonium
 
 ### Tech Stack
 
-- Based on [underscores](https://underscores.me/)
+- Based on [wd_s](https://github.com/WebDevStudios/wd_s), which was based on [underscores](https://underscores.me/)
 - Has the [Harmonium Asset Library](https://harmonium.revelry.co/) baked in
 
 
