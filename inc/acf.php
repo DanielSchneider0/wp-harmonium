@@ -410,6 +410,9 @@ add_filter( 'acf/load_field/name=color_picker', 'harmonium_acf_load_color_picker
  */
 function harmonium_get_theme_colors() {
 	return array(
+		esc_html__( 'Primary', 'harmonium' )        => '#4f31a8',
+		esc_html__( 'Secondary', 'harmonium' )      => '#8a31a8',
+		esc_html__( 'Tertiary', 'harmonium' )      => '#316ca8',
 		esc_html__( 'Alto', 'harmonium' )           => '#ddd',
 		esc_html__( 'Black', 'harmonium' )          => '#000',
 		esc_html__( 'Blue', 'harmonium' )           => '#21759b',
