@@ -281,6 +281,9 @@ $color-background-scaffolding: $white;
 
 /// Sass map used for creating color presentational classes.
 $theme-colors: (
+	primary: $primary,
+	secondary: $brand-secondary,
+	tertiary: $brand-tertiary,
 	alto: $color-alto,
 	black: $color-black,
 	blue: $color-blue,
