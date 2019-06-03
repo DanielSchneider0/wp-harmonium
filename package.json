@@ -1,7 +1,7 @@
 {
-  "name": "wd_s",
+  "name": "Harmonium",
   "version": "1.0.0",
-  "description": "A theme boilerplate for WebDevStudios.",
+  "description": "A starter theme for Revelry",
   "main": "Gulpfile.js",
   "dependencies": {
     "babel-core": "^6.26.3",
@@ -41,14 +41,14 @@
   "scripts": {
     "test": "echo \"No test specified\""
   },
-  "repository": "git+https://github.com/WebDevStudios/wd_s.git",
+  "repository": "git+https://github.com/revelrylabs/wp-harmonium.git",
   "keywords": [
     "theme"
   ],
-  "author": "WebDevStudios",
+  "author": "Revely",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/WebDevStudios/wd_s/issues"
+    "url": "https://github.com/revelrylabs/wp-harmonium/issues"
   },
-  "homepage": "https://github.com/WebDevStudios/wd_s#readme"
+  "homepage": "https://github.com/revelrylabs/wp-harmonium#readme"
 }
