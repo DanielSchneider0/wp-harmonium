@@ -1,6 +1,6 @@
 {
-  "name": "_s",
-  "description": "A theme boilerplate for WebDevStudios.",
+  "name": "Harmonium",
+  "description": "A starter theme for Revelry",
   "version": "1.0.0",
   "keywords": [
     "css",
@@ -13,7 +13,7 @@
     "web",
     "wordpress"
   ],
-  "homepage": "http://webdevstudios.com",
+  "homepage": "https://revelry.co",
   "main": [
     "sass/style.scss",
     "style.css"
