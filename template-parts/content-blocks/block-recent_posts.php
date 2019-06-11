@@ -36,18 +36,20 @@ if ( $recent_posts->have_posts() ) :
 	harmonium_display_block_options(
 		array(
 			'container' => 'section', // Any HTML5 container: section, div, etc...
-			'class'     => 'rev-home-hero rev-Row' // Container class.
+			'class'     => 'rev-Row rev-Row--flex rev-Row--justifyCenter' // Container class.
 		)
 	);
 	?>
 
-		<div class="container">
-			<?php if ( $block_title ) : ?>
-			<h2 class="content-block-title"><?php echo esc_html( $block_title ); ?></h2>
-			<?php endif; ?>
+		<div class="rev-Row">
+			<div class="rev-Col">
+				<?php if ( $block_title ) : ?>
+				<h2 class="content-block-title"><?php echo esc_html( $block_title ); ?></h2>
+				<?php endif; ?>
+			</div>
 		</div>
 
-		<div class="container rev-Row rev-Row--flex <?php echo esc_attr( harmonium_get_animation_class() ); ?>">
+		<div class="rev-Row rev-Row--flex <?php echo esc_attr( harmonium_get_animation_class() ); ?>">
 
 			<?php
 			// Loop through recent posts.

@@ -16,18 +16,20 @@ if ( $related_posts ) :
 	harmonium_display_block_options(
 		array(
 			'container' => 'section', // Any HTML5 container: section, div, etc...
-			'class'     => 'content-block related-posts-block', // Container class.
+			'class'     => 'rev-Row rev-Row--flex rev-Row--justifyCenter' // Container class.
 		)
 	);
 	?>
 
-		<div class="container">
-			<?php if ( $block_title ) : ?>
-				<h2 class="content-block-title"><?php echo esc_html( $block_title ); ?></h2>
-			<?php endif; ?>
+		<div class="rev-Row">
+			<div class="rev-Col">
+				<?php if ( $block_title ) : ?>
+					<h2 class="content-block-title"><?php echo esc_html( $block_title ); ?></h2>
+				<?php endif; ?>
+			</div>
 		</div>
 
-		<div class="container display-flex<?php echo esc_attr( harmonium_get_animation_class() ); ?>">
+		<div class="rev-Row rev-Row--flex <?php echo esc_attr( harmonium_get_animation_class() ); ?>">
 
 			<?php
 			// Loop through recent posts.
@@ -48,7 +50,7 @@ if ( $related_posts ) :
 							)
 						),
 						'url'   => get_the_permalink(),
-						'class' => 'third',
+						'class' => 'rev-Col rev-Col--medium4 rev-Col--small12',
 					)
 				);
 
