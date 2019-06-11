@@ -29,7 +29,7 @@ harmonium_display_block_options(
 				<?php endif; ?>
 			</div><!-- .rev-Col -->
 		
-			<div class="rev-Col rev-Col--medium6 rev-Col--small12">
+			<div class="rev-Col rev-Col--alignCenter rev-Col--medium6 rev-Col--small12">
 				<?php
 				harmonium_display_link(
 					array(
