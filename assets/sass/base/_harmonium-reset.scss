@@ -18,45 +18,6 @@ section {
 	border-bottom: none;
 }
 
-// Cleaning up some unreasonable sizes that Harmonium likes to put in place
-// Will move these to a better, more global location later.
-h1 {
-	color: $primary;
-	font-size: $global-font-size-larger;
-	line-height: $global-lineheight;
-	padding: $global-padding 0 0;
-}
-
-h2 {
-	font-size: $global-font-size-larger;
-	line-height: $global-lineheight;
-	padding-top: $global-padding;
-}
-
-h3 {
-	font-size: $global-font-size-large;
-	line-height: $global-lineheight;
-	padding-top: $global-padding-small;
-}
-
-h4 {
-	font-size: $global-font-size-medium;
-	line-height: $global-lineheight;
-	padding-top: $global-padding-small;
-}
-
-h5 {
-	font-size: $global-font-size-small;
-	line-height: $global-lineheight;
-	padding-top: $global-padding-small;
-}
-
-h6 {
-	font-size: $global-font-size-smaller;
-	line-height: $global-lineheight;
-	padding-top: $global-padding-small;
-}
-
 li {
 	padding: 0;
 }
@@ -64,4 +25,5 @@ li {
 p {
 	padding-bottom: 0;
 	margin: 0 0 $global-margin 0;
+	max-width: 100%;
 }
