@@ -13,24 +13,27 @@ $text        = get_sub_field( 'text' );
 harmonium_display_block_options(
 	array(
 		'container' => 'section', // Any HTML5 container: section, div, etc...
-		'class'     => 'content-block hero-block', // Container class.
+		'class'     => 'rev-home-hero rev-Row rev-Row--flex rev-Row--alignCenter', // Container class.
 	)
 );
 ?>
 	<div class="container hero-content<?php echo esc_attr( harmonium_get_animation_class() ); ?>">
 		<?php harmonium_display_hero_heading( $block_title ); ?>
+		<div class="rev-Row">
+			<div class="rev-Col">
+				<?php if ( $text ) : ?>
+					<p class="hero-description"><?php echo esc_html( $text ); ?></p>
+				<?php endif; ?>
 
-		<?php if ( $text ) : ?>
-			<p class="hero-description"><?php echo esc_html( $text ); ?></p>
-		<?php endif; ?>
-
-		<?php
-		harmonium_display_link(
-			array(
-				'button' => true,
-				'class'  => 'button-hero',
-			)
-		);
-		?>
+				<?php
+				harmonium_display_link(
+					array(
+						'button' => true,
+						'class'  => 'button-hero',
+					)
+				);
+				?>
+			</div><!-- .rev-Col -->
+		</div><!-- .rev-Row -->
 	</div><!-- .hero-content-->
 </section><!-- .hero -->
