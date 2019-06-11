@@ -15,7 +15,7 @@ $row_index       = get_row_index();
 harmonium_display_block_options(
 	array(
 		'container' => 'section', // Any HTML5 container: section, div, etc...
-		'class'     => 'rev-home-hero rev-Row' // Container class.
+		'class'     => 'rev-Row' // Container class.
 	)
 );
 ?>
