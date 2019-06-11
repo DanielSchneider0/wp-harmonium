@@ -36,7 +36,7 @@ if ( $recent_posts->have_posts() ) :
 	harmonium_display_block_options(
 		array(
 			'container' => 'section', // Any HTML5 container: section, div, etc...
-			'class'     => 'content-block recent-posts-block', // Container class.
+			'class'     => 'rev-home-hero rev-Row' // Container class.
 		)
 	);
 	?>
@@ -47,7 +47,7 @@ if ( $recent_posts->have_posts() ) :
 			<?php endif; ?>
 		</div>
 
-		<div class="container display-flex<?php echo esc_attr( harmonium_get_animation_class() ); ?>">
+		<div class="container rev-Row rev-Row--flex <?php echo esc_attr( harmonium_get_animation_class() ); ?>">
 
 			<?php
 			// Loop through recent posts.
@@ -66,7 +66,7 @@ if ( $recent_posts->have_posts() ) :
 							)
 						),
 						'url'   => get_the_permalink(),
-						'class' => 'third',
+						'class' => 'rev-Col rev-Col--medium4 rev-Col--small12',
 					)
 				);
 
