@@ -13,8 +13,7 @@ $text       = get_sub_field( 'text_primary' );
 harmonium_display_block_options(
 	array(
 		'container' => 'section', // Any HTML5 container: section, div, etc...
-		'class'     => 'rev-home-hero rev-Row'
-		// 'class'     => 'content-block grid-container fifty-fifty fifty-text-media', // Container class.
+		'class'     => 'rev-home-hero rev-Row' // Container class.
 	)
 );
 ?>
