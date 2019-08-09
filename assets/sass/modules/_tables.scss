@@ -38,7 +38,7 @@ table {
 		letter-spacing: rem(1);
 		text-transform: uppercase;
 
-		@include media($phone) {
+		@include breakpoint($phone) {
 			display: table-cell;
 		}
 	} // th
