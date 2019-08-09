@@ -143,7 +143,7 @@ img {
 	max-width: calc(100% + 70px);
 	width: calc(100% + 70px);
 
-	@include media($tablet-landscape) {
+	@include breakpoint(medium) {
 		margin-left: rem(-115);
 		max-width: calc(100% + 230px);
 		width: calc(100% + 230px);
