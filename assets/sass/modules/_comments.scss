@@ -237,7 +237,7 @@
 
 		background-color: $color-comment-response;
 
-		@include media($phone) {
+		@include breakpoint($phone) {
 			padding-left: rem(36);
 			padding-right: rem(36);
 		}
