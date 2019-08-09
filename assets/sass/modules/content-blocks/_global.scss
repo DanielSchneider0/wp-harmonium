@@ -11,7 +11,7 @@
 			@include margin($gutter * 2 auto);
 			@include padding($gutter * 2 0);
 
-			@include media($container-offset) {
+			@include breakpoint($container-offset) {
 				@include padding($gutter * 2 $gutter);
 			}
 		} // &.container-width.
@@ -44,7 +44,7 @@
 	&-title {
 		text-align: center;
 
-		@include media($tablet-portrait) {
+		@include breakpoint(medium) {
 			text-align: left;
 		}
 	} // .content-block-title
