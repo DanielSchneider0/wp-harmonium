@@ -54,7 +54,7 @@ $social-sites: facebook instagram linkedin twitter;
 				display: block;
 				text-indent: rem(-999999);
 
-				@include media($tablet-portrait) {
+				@include breakpoint(medium) {
 					@include size(rem(19));
 
 					background-size: rem(19);
