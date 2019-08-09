@@ -10,7 +10,7 @@
 
 	border-top: 1px solid $color-border-comment;
 
-	@include media($desktop) {
+	@include breakpoint(xlarge) {
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -67,7 +67,7 @@
 			border: 1px solid $color-border-comment-focus;
 		} // &:focus, &:active
 
-		@include media($phone) {
+		@include breakpoint($phone) {
 			max-width: rem(250);
 		}
 	} // input:not(.submit)
@@ -218,7 +218,7 @@
 			.comment-author {
 				line-height: 1.25;
 
-				@include media($phone) {
+				@include breakpoint($phone) {
 					line-height: 1;
 				}
 			} // .comment-author
