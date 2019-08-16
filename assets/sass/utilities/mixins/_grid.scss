@@ -16,7 +16,7 @@
 //-----------------------------------------
 @mixin half {
 
-	@include media($tablet-landscape) {
+	@include breakpoint(large) {
 		flex-basis: calc(50% - #{rem(25)});
 		flex-grow: 0;
 		flex-shrink: 0;
@@ -26,7 +26,7 @@
 	&:nth-child(odd) {
 		@include margin(0 0 rem(25) 0);
 
-		@include media($tablet-landscape) {
+		@include breakpoint(large) {
 			@include margin(0 rem(50) 0 0);
 		}
 	} // &:first-child
@@ -38,7 +38,7 @@
 @mixin third {
 	@include margin(0 0 rem(25) 0);
 
-	@include media($tablet-landscape) {
+	@include breakpoint(large) {
 		@include margin(0 rem(50) rem(50) 0);
 
 		flex: 0 0 calc(33.33% - #{rem(33.33)});
@@ -48,7 +48,7 @@
 	&:nth-child(3n + 3) {
 		@include margin(0 0 rem(50));
 
-		@include media($tablet-landscape) {
+		@include breakpoint(large) {
 			@include margin(0 0 rem(50));
 		}
 	} // &:first-child
@@ -60,7 +60,7 @@
 @mixin quarter {
 	@include margin(0 0 rem(25) 0);
 
-	@include media($tablet-landscape) {
+	@include breakpoint(large) {
 		@include margin(0 rem(50) rem(50) 0);
 
 		flex: 0 0 calc(25% - #{rem(37.5)});
@@ -70,7 +70,7 @@
 	&:nth-child(4n + 4) {
 		@include margin(0 0 rem(50));
 
-		@include media($tablet-landscape) {
+		@include breakpoint(large) {
 			@include margin(0 0 rem(50));
 		}
 	} // &:first-child
@@ -81,7 +81,7 @@
 //-----------------------------------------
 @mixin left-two-thirds {
 
-	@include media($tablet-landscape) {
+	@include breakpoint(large) {
 		flex-basis: calc(66.66% - #{$gutter * 3});
 		flex-grow: 0;
 		flex-shrink: 0;
@@ -91,7 +91,7 @@
 
 @mixin right-third {
 
-	@include media($tablet-landscape) {
+	@include breakpoint(large) {
 		flex-basis: 33%;
 		flex-grow: 0;
 		flex-shrink: 0;
@@ -106,7 +106,7 @@
 //-----------------------------------------
 @mixin left-third {
 
-	@include media($tablet-landscape) {
+	@include breakpoint(large) {
 		flex-basis: 33%;
 		flex-grow: 0;
 		flex-shrink: 0;
@@ -117,7 +117,7 @@
 
 @mixin right-two-thirds {
 
-	@include media($tablet-landscape) {
+	@include breakpoint(large) {
 		flex-basis: calc(66.66% - #{$gutter * 3});
 		flex-grow: 0;
 		flex-shrink: 0;

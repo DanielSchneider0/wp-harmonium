@@ -11,18 +11,18 @@
 		flex: 0 0 auto;
 		width: 85%;
 
-		@include media($tablet-portrait) {
+		@include breakpoint(medium-down) {
 			margin-right: auto;
 			width: 90%;
 		}
 
-		@include media($tablet-landscape) {
+		@include breakpoint(large) {
 			width: 45%;
 		}
 
 		// Don't let the logo get out of control.
 		img {
-			@include media($tablet-portrait, $tablet-landscape) {
+			@include breakpoint(medium-only) {
 				width: 50%;
 			}
 		} // img
@@ -35,7 +35,7 @@
 		font-size: rem(48);
 
 		// Align next to the logo on mid-size screens.
-		@include media($tablet-portrait, $tablet-landscape) {
+		@include breakpoint(medium-only) {
 			@include margin(0);
 
 			width: 50%;
@@ -50,7 +50,7 @@
 
 		font-size: $space;
 
-		@include media($tablet-portrait, $tablet-landscape) {
+		@include breakpoint(medium-only) {
 			clear: both;
 		}
 	} // .site-description
@@ -62,12 +62,12 @@
 		flex: 0 0 auto;
 		width: 100%;
 
-		@include media($tablet-landscape) {
+		@include breakpoint(large) {
 			margin-left: auto;
 			width: 35%;
 		}
 
-		@include media($desktop) {
+		@include breakpoint(xlarge) {
 			width: 25%;
 		}
 	} // .site-header-action
@@ -78,7 +78,7 @@
 	.site-header-action {
 		text-align: left;
 
-		@include media($tablet-landscape) {
+		@include breakpoint(large) {
 			text-align: right;
 		}
 

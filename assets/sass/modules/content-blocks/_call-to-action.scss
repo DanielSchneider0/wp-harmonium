@@ -4,7 +4,7 @@
 .cta-block {
 	text-align: center;
 
-	@include media($tablet-portrait) {
+	@include breakpoint(medium) {
 		text-align: left;
 	}
 
@@ -19,7 +19,7 @@
 	.button-cta {
 		@include margin(0 auto);
 
-		@include media($tablet-portrait) {
+		@include breakpoint(medium) {
 			@include margin(0);
 		}
 	} // .cta-button

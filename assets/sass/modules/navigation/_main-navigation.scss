@@ -4,7 +4,7 @@
 .main-navigation {
 	display: none;
 
-	@include media($tablet-landscape) {
+	@include breakpoint(large) {
 		display: block;
 	}
 
@@ -12,7 +12,7 @@
 	ul {
 		display: none;
 
-		@include media($phone) {
+		@include breakpoint(medium) {
 			@include margin(null auto);
 			@include padding(null $gutter);
 
@@ -20,7 +20,7 @@
 			max-width: $container;
 		}
 
-		@include media($container-offset) {
+		@include breakpoint(container-offset) {
 			@include padding(null 0);
 		}
 

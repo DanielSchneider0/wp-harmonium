@@ -9,7 +9,7 @@
 
 	max-width: $container;
 
-	@include media($container-offset) {
+	@include breakpoint(container-offset) {
 		@include padding(0);
 	}
 

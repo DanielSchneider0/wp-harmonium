@@ -26,7 +26,7 @@ $slide-height: rem(500);
 	.slick-next {
 		right: $gutter;
 
-		@include media($desktop) {
+		@include breakpoint(xlarge) {
 			right: 0;
 		}
 	} // .slick-next
@@ -35,7 +35,7 @@ $slide-height: rem(500);
 	.slick-prev {
 		left: $gutter;
 
-		@include media($desktop) {
+		@include breakpoint(xlarge) {
 			left: 0;
 		}
 	} // .slick-prev
