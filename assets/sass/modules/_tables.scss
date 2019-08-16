@@ -14,7 +14,7 @@ table {
 	thead {
 		display: none;
 
-		@include breakpoint($wp-admin-bar) {
+		@include breakpoint(wp-admin-bar) {
 			display: table-row-group;
 		}
 	} // thead
@@ -26,7 +26,7 @@ table {
 
 		text-align: center;
 
-		@include breakpoint($wp-admin-bar) {
+		@include breakpoint(wp-admin-bar) {
 			display: table-cell;
 		}
 	} // th, td
@@ -38,7 +38,7 @@ table {
 		letter-spacing: rem(1);
 		text-transform: uppercase;
 
-		@include breakpoint($phone) {
+		@include breakpoint(phone) {
 			display: table-cell;
 		}
 	} // th
@@ -48,7 +48,7 @@ table {
 		display: block;
 		margin-bottom: rem(10);
 
-		@include breakpoint($wp-admin-bar) {
+		@include breakpoint(wp-admin-bar) {
 			display: table-row;
 			margin-bottom: 0;
 		}
@@ -62,7 +62,7 @@ table {
 		font-size: rem(13);
 		text-align: center;
 
-		@include breakpoint($wp-admin-bar) {
+		@include breakpoint(wp-admin-bar) {
 			border-bottom: 0;
 		}
 
@@ -79,13 +79,13 @@ table {
 			font-weight: bold;
 			text-transform: uppercase;
 
-			@include breakpoint($wp-admin-bar) {
+			@include breakpoint(wp-admin-bar) {
 				display: none;
 			}
 		} // &::before
 	} // td
 
-	@include breakpoint($wp-admin-bar) {
+	@include breakpoint(wp-admin-bar) {
 		border: 1px solid $color-border-table;
 	}
 } // table

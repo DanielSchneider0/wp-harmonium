@@ -52,7 +52,7 @@
 	max-width: $container;
 	position: relative;
 
-	@include breakpoint($container-offset) {
+	@include breakpoint(container-offset) {
 		@include padding(0);
 	}
 } // .container

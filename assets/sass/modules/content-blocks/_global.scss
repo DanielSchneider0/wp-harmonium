@@ -11,7 +11,7 @@
 			@include margin($gutter * 2 auto);
 			@include padding($gutter * 2 0);
 
-			@include breakpoint($container-offset) {
+			@include breakpoint(container-offset) {
 				@include padding($gutter * 2 $gutter);
 			}
 		} // &.container-width.

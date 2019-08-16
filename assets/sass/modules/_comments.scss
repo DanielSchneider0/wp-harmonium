@@ -67,7 +67,7 @@
 			border: 1px solid $color-border-comment-focus;
 		} // &:focus, &:active
 
-		@include breakpoint($phone) {
+		@include breakpoint(phone) {
 			max-width: rem(250);
 		}
 	} // input:not(.submit)
@@ -218,7 +218,7 @@
 			.comment-author {
 				line-height: 1.25;
 
-				@include breakpoint($phone) {
+				@include breakpoint(phone) {
 					line-height: 1;
 				}
 			} // .comment-author
@@ -237,7 +237,7 @@
 
 		background-color: $color-comment-response;
 
-		@include breakpoint($phone) {
+		@include breakpoint(phone) {
 			padding-left: rem(36);
 			padding-right: rem(36);
 		}
