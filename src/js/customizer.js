@@ -18,14 +18,14 @@ if ( ( 'complete' === document.readyState || 'loading' !== document.readyState )
  * @author Corey Collins
  */
 function wdsCustomizer() {
-	const headerButtonSelect = document.querySelector( '#customize-control-_s_header_button select' );
+	const headerButtonSelect = document.querySelector( '#customize-control-harmonium_header_button select' );
 
 	if ( ! headerButtonSelect ) {
 		return;
 	}
 
-	const headerLinkButton = document.querySelector( '#customize-control-_s_header_button_url' ),
-		headerLinkText = document.querySelector( '#customize-control-_s_header_button_text' );
+	const headerLinkButton = document.querySelector( '#customize-control-harmonium_header_button_url' ),
+		headerLinkText = document.querySelector( '#customize-control-harmonium_header_button_text' );
 
 	headerButtonSelect.addEventListener( 'change', showHideLinkField );
 

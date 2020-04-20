@@ -2,17 +2,17 @@
 /**
  * The template used for displaying a Hero block.
  *
- * @package _s
+ * @package Harmonium
  */
 
 // Set up fields.
 $block_title = get_field( 'title' );
 $text        = get_field( 'text' );
-$alignment   = _s_get_block_alignment( $block );
-$classes     = _s_get_block_classes( $block );
+$alignment   = harmonium_get_block_alignment( $block );
+$classes     = harmonium_get_block_classes( $block );
 
 // Start a <container> with possible block options.
-_s_display_block_options(
+harmonium_display_block_options(
 	array(
 		'block'     => $block,
 		'container' => 'section', // Any HTML5 container: section, div, etc...
@@ -21,14 +21,14 @@ _s_display_block_options(
 );
 ?>
 	<div class="container hero-block-content">
-		<?php _s_display_hero_heading( $block_title ); ?>
+		<?php harmonium_display_hero_heading( $block_title ); ?>
 
 		<?php if ( $text ) : ?>
 			<p class="hero-block-description"><?php echo esc_html( $text ); ?></p>
 		<?php endif; ?>
 
 		<?php
-		_s_display_link(
+		harmonium_display_link(
 			array(
 				'button' => true,
 				'class'  => 'button-hero',

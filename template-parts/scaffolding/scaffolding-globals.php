@@ -2,18 +2,18 @@
 /**
  * The template used for displaying colors & fonts in the scaffolding library.
  *
- * @package _s
+ * @package Harmonium
  */
 
 ?>
 
 <section class="section-scaffolding">
 
-	<h2 class="scaffolding-heading"><?php esc_html_e( 'Globals', '_s' ); ?></h2>
+	<h2 class="scaffolding-heading"><?php esc_html_e( 'Globals', 'harmonium' ); ?></h2>
 
 	<?php
 		// Theme colors.
-		_s_display_global_scaffolding_section(
+		harmonium_display_global_scaffolding_section(
 			array( // WPCS: XSS OK.
 				'global_type' => 'colors',
 				'title'       => 'Colors',
@@ -28,7 +28,7 @@
 		);
 
 		// Theme fonts.
-		_s_display_global_scaffolding_section(
+		harmonium_display_global_scaffolding_section(
 			array( // WPCS: XSS OK.
 				'global_type' => 'fonts',
 				'title'       => 'Fonts',

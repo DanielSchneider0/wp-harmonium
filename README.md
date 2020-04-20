@@ -25,19 +25,19 @@ If you want to keep it simple, head over to [https://wdunderscores.com](https://
 
 If you want to set me up manually:
 
-1) [Download](https://github.com/WebDevStudios/wd_s/archive/master.zip) and extract the zip into your `wp-content/themes` directory and rename `wd_s-master` to fit your needs.
+1) [Download](https://github.com/WebDevStudios/wd_s/archive/master.zip) and extract the zip into your `wp-content/themes` directory and rename `wdharmonium-master` to fit your needs.
 
 2) Find & Replace
 
 You'll need to change all instances of the names: `_s`.
 
-* Search for: `'_s'` and replace with: `'project-name'` (inside single quotations) to capture the text domain
-* Search for: `_s_` and replace with: `project-name_` to capture all the function names
-* Search for: `Text Domain: _s` and replace with: `Text Domain: project-name` in style.css
+* Search for: `'harmonium'` and replace with: `'project-name'` (inside single quotations) to capture the text domain
+* Search for: `harmonium_` and replace with: `project-name_` to capture all the function names
+* Search for: `Text Domain: harmonium` and replace with: `Text Domain: project-name` in style.css
 * Search for (and include the leading space): <code>&nbsp;_s</code> and replace with: <code>&nbsp;Project Name</code> (with a space before it) to capture DocBlocks
-* Search for: `_s-` and replace with: `project-name-` to capture prefixed handles
-* Search for `_s.pot` and replace with: `project-name.pot` to capture translation files
-* Search for `_s.test` and replace with: `project-name.test` to match your local development URL
+* Search for: `harmonium-` and replace with: `project-name-` to capture prefixed handles
+* Search for `harmonium.pot` and replace with: `project-name.pot` to capture translation files
+* Search for `harmonium.local` and replace with: `project-name.test` to match your local development URL
 * Edit the theme information in the header of style.scss to meet your needs
 
 ## Installation
