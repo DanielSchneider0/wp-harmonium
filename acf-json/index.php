@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Harmonium
+ * @package _s
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

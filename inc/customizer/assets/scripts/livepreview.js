@@ -51,7 +51,7 @@
 	});
 
 	// Copyright text.
-	api( 'harmonium_copyright_text', function( value ) {
+	api( '_s_copyright_text', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-info' ).text( to );
 		});

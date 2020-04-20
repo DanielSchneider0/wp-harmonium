@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Harmonium
+ * @package _s
  */
 
 ?>
@@ -23,7 +23,7 @@
 </head>
 
 <body <?php body_class( 'site-wrapper' ); ?>>
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'harmonium' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
 	<header class="site-header background-gallery">
 		<div class="display-flex container">
@@ -46,16 +46,16 @@
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 
-			<?php harmonium_display_header_button(); ?>
+			<?php _s_display_header_button(); ?>
 
 			<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'mobile' ) ) : ?>
-				<button type="button" class="off-canvas-open" aria-expanded="false" aria-label="<?php esc_html_e( 'Open Menu', 'harmonium' ); ?>">
+				<button type="button" class="off-canvas-open" aria-expanded="false" aria-label="<?php esc_html_e( 'Open Menu', '_s' ); ?>">
 					<span class="hamburger"></span>
 				</button>
 			<?php endif; ?>
 		</div><!-- .container -->
 
-		<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'harmonium' ); ?>">
+		<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', '_s' ); ?>">
 			<?php
 			wp_nav_menu(
 				array(

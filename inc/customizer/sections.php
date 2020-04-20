@@ -2,7 +2,7 @@
 /**
  * Customizer sections.
  *
- * @package Harmonium
+ * @package _s
  */
 
 /**
@@ -11,13 +11,13 @@
  * @author WDS
  * @param object $wp_customize Instance of WP_Customize_Class.
  */
-function harmonium_customize_sections( $wp_customize ) {
+function _s_customize_sections( $wp_customize ) {
 
 	// Register additional scripts section.
 	$wp_customize->add_section(
-		'harmonium_additional_scripts_section',
+		'_s_additional_scripts_section',
 		array(
-			'title'    => esc_html__( 'Additional Scripts', 'harmonium' ),
+			'title'    => esc_html__( 'Additional Scripts', '_s' ),
 			'priority' => 10,
 			'panel'    => 'site-options',
 		)
@@ -25,10 +25,10 @@ function harmonium_customize_sections( $wp_customize ) {
 
 	// Register a social links section.
 	$wp_customize->add_section(
-		'harmonium_social_links_section',
+		'_s_social_links_section',
 		array(
-			'title'       => esc_html__( 'Social Media', 'harmonium' ),
-			'description' => esc_html__( 'Links here power the display_social_network_links() template tag.', 'harmonium' ),
+			'title'       => esc_html__( 'Social Media', '_s' ),
+			'description' => esc_html__( 'Links here power the display_social_network_links() template tag.', '_s' ),
 			'priority'    => 90,
 			'panel'       => 'site-options',
 		)
@@ -36,9 +36,9 @@ function harmonium_customize_sections( $wp_customize ) {
 
 	// Register a header section.
 	$wp_customize->add_section(
-		'harmonium_header_section',
+		'_s_header_section',
 		array(
-			'title'    => esc_html__( 'Header Customizations', 'harmonium' ),
+			'title'    => esc_html__( 'Header Customizations', '_s' ),
 			'priority' => 90,
 			'panel'    => 'site-options',
 		)
@@ -46,12 +46,12 @@ function harmonium_customize_sections( $wp_customize ) {
 
 	// Register a footer section.
 	$wp_customize->add_section(
-		'harmonium_footer_section',
+		'_s_footer_section',
 		array(
-			'title'    => esc_html__( 'Footer Customizations', 'harmonium' ),
+			'title'    => esc_html__( 'Footer Customizations', '_s' ),
 			'priority' => 90,
 			'panel'    => 'site-options',
 		)
 	);
 }
-add_action( 'customize_register', 'harmonium_customize_sections' );
+add_action( 'customize_register', '_s_customize_sections' );

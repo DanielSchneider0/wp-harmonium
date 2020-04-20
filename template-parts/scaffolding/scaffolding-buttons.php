@@ -2,17 +2,17 @@
 /**
  * The template used for displaying Buttons in the scaffolding library.
  *
- * @package Harmonium
+ * @package _s
  */
 
 ?>
 
 <section class="section-scaffolding">
 
-	<h2 class="scaffolding-heading"><?php esc_html_e( 'Buttons', 'harmonium' ); ?></h2>
+	<h2 class="scaffolding-heading"><?php esc_html_e( 'Buttons', '_s' ); ?></h2>
 	<?php
 		// Button.
-		harmonium_display_scaffolding_section(
+		_s_display_scaffolding_section(
 			array(
 				'title'       => 'Button',
 				'description' => 'Display a button.',

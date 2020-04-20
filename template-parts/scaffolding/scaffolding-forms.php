@@ -2,19 +2,19 @@
 /**
  * The template used for displaying forms in the scaffolding library.
  *
- * @package Harmonium
+ * @package _s
  */
 
 ?>
 
 <section class="section-scaffolding">
 
-	<h2 class="scaffolding-heading"><?php esc_html_e( 'Forms', 'harmonium' ); ?></h2>
+	<h2 class="scaffolding-heading"><?php esc_html_e( 'Forms', '_s' ); ?></h2>
 
 	<?php
 	// Search form.
 	$echo = false; // set echo to false so the search form outputs correctly.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Search Form',
 			'description' => 'Display the search form.',
@@ -24,7 +24,7 @@
 	);
 
 	// Input.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Input',
 			'description' => 'Display a normal input.',
@@ -34,7 +34,7 @@
 	);
 
 	// Default Select.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Default Select',
 			'description' => 'Display default select.',
@@ -44,7 +44,7 @@
 	);
 
 	// Checkbox.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Checkboxes',
 			'description' => 'Display checkboxes.',
@@ -66,7 +66,7 @@
 	);
 
 	// Radio boxes.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Radio boxes.',
 			'description' => 'Display radio boxes.',
@@ -88,7 +88,7 @@
 	);
 
 	// Textarea.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Textarea',
 			'description' => 'Display a textarea.',

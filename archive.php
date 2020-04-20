@@ -4,55 +4,44 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Harmonium
+ * @package _s
  */
 
 get_header(); ?>
 
 	<main id="main" class="site-main">
-		<div class="rev-ContentWrapper">
-			<div class="rev-Content">
-				<div class="rev-Row">
-					<div class="rev-Col rev-Col--small9">
 
-						<?php if ( have_posts() ) : ?>
+		<?php if ( have_posts() ) : ?>
 
-							<header class="page-header">
-								<?php
-									the_archive_title( '<h1 class="page-title">', '</h1>' );
-									the_archive_description( '<div class="archive-description">', '</div>' );
-								?>
-							</header><!-- .page-header -->
+			<header class="page-header">
+				<?php
+					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_description( '<div class="archive-description">', '</div>' );
+				?>
+			</header><!-- .page-header -->
 
-							<?php
-							/* Start the Loop */
-							while ( have_posts() ) :
-								the_post();
+			<?php
+			/* Start the Loop */
+			while ( have_posts() ) :
+				the_post();
 
-								/*
-									* Include the Post-Format-specific template for the content.
-									* If you want to override this in a child theme, then include a file
-									* called content-___.php (where ___ is the Post Format name) and that will be used instead.
-									*/
-								get_template_part( 'template-parts/content', get_post_format() );
+				/*
+					* Include the Post-Format-specific template for the content.
+					* If you want to override this in a child theme, then include a file
+					* called content-___.php (where ___ is the Post Format name) and that will be used instead.
+					*/
+				get_template_part( 'template-parts/content', get_post_format() );
 
-							endwhile;
+			endwhile;
 
-							harmonium_display_numeric_pagination();
+			_s_display_numeric_pagination();
 
-						else :
+		else :
 
-							get_template_part( 'template-parts/content', 'none' );
+			get_template_part( 'template-parts/content', 'none' );
 
-						endif;
-						?>
-						</div><!-- rev-Col -->
-						<div class="rev-Col rev-Col--small3">
-							<?php get_sidebar(); ?>
-						</div><!-- rev-Col -->
-					</div><!-- rev-Row -->
-				</div>
-			</div>
-		</div>
+		endif;
+		?>
+
 	</main><!-- #main -->
 <?php get_footer(); ?>

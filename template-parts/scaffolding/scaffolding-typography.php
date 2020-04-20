@@ -2,18 +2,18 @@
 /**
  * The template used for displaying typography in the scaffolding library.
  *
- * @package Harmonium
+ * @package _s
  */
 
 ?>
 
 <section class="section-scaffolding">
 
-	<h2 class="scaffolding-heading"><?php esc_html_e( 'Typography', 'harmonium' ); ?></h2>
+	<h2 class="scaffolding-heading"><?php esc_html_e( 'Typography', '_s' ); ?></h2>
 
 	<?php
 	// H1.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'H1',
 			'description' => 'Display an H1',
@@ -23,7 +23,7 @@
 	);
 
 	// H2.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'H2',
 			'description' => 'Display an H2',
@@ -33,7 +33,7 @@
 	);
 
 	// H3.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'H3',
 			'description' => 'Display an H3',
@@ -43,7 +43,7 @@
 	);
 
 	// H4.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'H4',
 			'description' => 'Display an H4',
@@ -53,7 +53,7 @@
 	);
 
 	// H5.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'H5',
 			'description' => 'Display an H5',
@@ -63,7 +63,7 @@
 	);
 
 	// H6.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'H6',
 			'description' => 'Display an H6',
@@ -73,7 +73,7 @@
 	);
 
 	// Body.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Paragraph',
 			'description' => 'Display a paragraph',
@@ -83,7 +83,7 @@
 	);
 
 	// Link.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Link',
 			'description' => 'Displays a link.',
@@ -93,7 +93,7 @@
 	);
 
 	// HTML table.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Table',
 			'description' => 'Display a table',
@@ -182,7 +182,7 @@
 
 
 	// Ordered List.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Ordered List',
 			'description' => 'Display an ordered list.',
@@ -226,7 +226,7 @@
 	);
 
 	// Unordered List.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Unordered List',
 			'description' => 'Display an unordered list.',
@@ -270,7 +270,7 @@
 	);
 
 	// Blockquote.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Blockquote',
 			'description' => 'Display a blockquote.',
@@ -280,7 +280,7 @@
 	);
 
 	// Code tag.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Code Tag',
 			'description' => 'Display a code tag.',
@@ -290,7 +290,7 @@
 	);
 
 	// Em tag.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Emphasize Tag',
 			'description' => 'Display an <em> tag.',
@@ -300,7 +300,7 @@
 	);
 
 	// Strong tag.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Strong Tag',
 			'description' => 'Display bold text.',
@@ -310,27 +310,27 @@
 	);
 
 	// Abbreviation Tag.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Abbreviation Tag',
 			'description' => 'Display an abbreviation.',
 			'usage'       => '<abbr title="Seriously">srsly</abbr>',
-			'output'      => '<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>',
+			'output'      => '<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for "seriously".</p>',
 		)
 	);
 
 	// Cite Tag.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Cite Tag',
 			'description' => 'Display a citation.',
 			'usage'       => '<cite>Automattic</cite>',
-			'output'      => '<p>“Code is poetry.” —<cite>Automattic</cite></p>',
+			'output'      => '<p>"Code is poetry." &mdash;<cite>Automattic</cite></p>',
 		)
 	);
 
 	// Strikeout Tag.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Strikeout Text',
 			'description' => 'Display strikeout text.',
@@ -340,7 +340,7 @@
 	);
 
 	// Delete Tag.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Delete Text',
 			'description' => 'Display the edited content of a text string.',
@@ -350,7 +350,7 @@
 	);
 
 	// Preformatted Tag.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Preformatted tag.',
 			'description' => 'This tag styles large blocks of code.',
@@ -374,37 +374,37 @@
 	);
 
 	// Keyboard Tag.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Keyboard Tag',
 			'description' => 'To display a key.',
 			'usage'       => '<kbd>Shift/kbd>',
-			'output'      => '<p>To paste copied text content stripped of formatting, use <kbd>⌘</kbd>+<kbd>Opt</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd>.</p>',
+			'output'      => '<p>To paste copied text content stripped of formatting, use <kbd>&#8984;</kbd>+<kbd>Opt</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd>.</p>',
 		)
 	);
 
 	// Subscript Tag.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Subscript Tag',
 			'description' => 'To display a subscript.',
 			'usage'       => '<sub>2</sub>',
-			'output'      => '<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>',
+			'output'      => '<p>Getting our science styling on with H<sub>2</sub>O, which should push the "2" down.</p>',
 		)
 	);
 
 	// Superscript Tag.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Superscript Tag',
 			'description' => 'To display a superscript.',
 			'usage'       => '<sup>2</sup>',
-			'output'      => '<p>Still sticking with science and Albert Einstein’s&nbsp;E = MC<sup>2</sup>, which should lift the “2” up.</p>',
+			'output'      => '<p>Still sticking with science and Albert Einstein\'s&nbsp;E = MC<sup>2</sup>, which should lift the "2" up.</p>',
 		)
 	);
 
 	// Variable Tag.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Variable Tag',
 			'description' => 'The HTML Variable element (<var>) represents the name of a variable in a mathematical expression or a programming context.',
@@ -414,7 +414,7 @@
 	);
 
 	// Address Tag.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Address Tag',
 			'description' => 'To display an address.',
@@ -436,7 +436,7 @@
 	);
 
 	// Definition lists.
-	harmonium_display_scaffolding_section(
+	_s_display_scaffolding_section(
 		array(
 			'title'       => 'Definition Lists',
 			'description' => 'To display defintion lists.',
@@ -447,7 +447,7 @@
 					<dt>Startup</dt>
 					<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
 					<dt>#dowork</dt>
-					<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
+					<dd>Coined by Rob Dyrdek and his personal body guard Christopher "Big Black" Boykins, "Do Work" works as a self motivator, to motivating your friends.</dd>
 				</dl>
 			',
 			'output'      => '
@@ -457,7 +457,7 @@
 					<dt>Startup</dt>
 					<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
 					<dt>#dowork</dt>
-					<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
+					<dd>Coined by Rob Dyrdek and his personal body guard Christopher "Big Black" Boykins, "Do Work" works as a self motivator, to motivating your friends.</dd>
 				</dl>
 			',
 		)

@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Harmonium
+ * @package _s
  */
 
 /**
@@ -13,9 +13,9 @@
  * @author WDS
  * @return bool Whether the blog has more than one category.
  */
-function harmonium_categorized_blog() {
+function _s_categorized_blog() {
 
-	$category_count = get_transient( 'harmonium_categories' );
+	$category_count = get_transient( '_s_categories' );
 
 	if ( false === $category_count ) {
 
@@ -27,7 +27,7 @@ function harmonium_categorized_blog() {
 
 		$category_count = (int) $category_count_query[0];
 
-		set_transient( 'harmonium_categories', $category_count );
+		set_transient( '_s_categories', $category_count );
 	}
 
 	return $category_count > 1;
@@ -40,7 +40,7 @@ function harmonium_categorized_blog() {
  * @param string $attachment_url The URL of the attachment.
  * @return int The attachment ID.
  */
-function harmonium_get_attachment_id_from_url( $attachment_url = '' ) {
+function _s_get_attachment_id_from_url( $attachment_url = '' ) {
 
 	global $wpdb;
 
@@ -85,7 +85,7 @@ function harmonium_get_attachment_id_from_url( $attachment_url = '' ) {
  * }
  * @return string
  */
-function harmonium_get_placeholder_unsplash( $args = array() ) {
+function _s_get_placeholder_unsplash( $args = array() ) {
 
 	$default_args = array(
 		'width'    => 200,
@@ -112,11 +112,11 @@ function harmonium_get_placeholder_unsplash( $args = array() ) {
 
 	// Perform some quick data validation.
 	if ( ! is_numeric( $args['width'] ) ) {
-		throw new Exception( esc_html__( 'Width must be an integer', 'harmonium' ) );
+		throw new Exception( esc_html__( 'Width must be an integer', '_s' ) );
 	}
 
 	if ( ! is_numeric( $args['height'] ) ) {
-		throw new Exception( esc_html__( 'Height must be an integer', 'harmonium' ) );
+		throw new Exception( esc_html__( 'Height must be an integer', '_s' ) );
 	}
 
 	// Set up the url to the image.
@@ -137,7 +137,7 @@ function harmonium_get_placeholder_unsplash( $args = array() ) {
 	}
 
 	// Text that will be utilized by screen readers.
-	$alt = apply_filters( 'harmonium_placeholder_image_alt', esc_html__( 'WebDevStudios Placeholder Image', 'harmonium' ) );
+	$alt = apply_filters( '_s_placeholder_image_alt', esc_html__( 'WebDevStudios Placeholder Image', '_s' ) );
 
 	return "<img src='$url' width='{$args['width']}' height='{$args['height']}' alt='$alt' />";
 }
@@ -152,7 +152,7 @@ function harmonium_get_placeholder_unsplash( $args = array() ) {
  * }
  * @return string
  */
-function harmonium_copyright_year( $atts ) {
+function _s_copyright_year( $atts ) {
 
 	// Setup defaults.
 	$args = shortcode_atts(
@@ -172,7 +172,7 @@ function harmonium_copyright_year( $atts ) {
 
 	return esc_html( $args['starting_year'] . $args['separator'] . $current_year );
 }
-add_shortcode( 'harmonium_copyright_year', 'harmonium_copyright_year', 15 );
+add_shortcode( '_s_copyright_year', '_s_copyright_year', 15 );
 
 if ( defined( 'WPSEO_VERSION' ) ) {
 	/**
@@ -182,10 +182,10 @@ if ( defined( 'WPSEO_VERSION' ) ) {
 	 * @author jomurgel <jo@webdevstudios.com>
 	 * @since  NEXT
 	 */
-	function harmonium_move_yoast_to_bottom() {
+	function _s_move_yoast_to_bottom() {
 		return 'low';
 	}
-	add_filter( 'wpseo_metabox_prio', 'harmonium_move_yoast_to_bottom' );
+	add_filter( 'wpseo_metabox_prio', '_s_move_yoast_to_bottom' );
 }
 
 /**
@@ -195,7 +195,7 @@ if ( defined( 'WPSEO_VERSION' ) ) {
  * @return mixed $content.
  * @author jomurgel
  */
-function harmonium_get_the_content( $content ) {
+function _s_get_the_content( $content ) {
 
 	// Bail if no content exists.
 	if ( empty( $content ) ) {
@@ -204,7 +204,7 @@ function harmonium_get_the_content( $content ) {
 	// Returns the content.
 	return $content;
 }
-add_filter( 'the_content', 'harmonium_get_the_content', 20 );
+add_filter( 'the_content', '_s_get_the_content', 20 );
 
 /**
  * Copies our ACF color settings into an array readable by Gutenberg's color picker.
@@ -212,10 +212,10 @@ add_filter( 'the_content', 'harmonium_get_the_content', 20 );
  * @return array $gutenberg_colors The Gutenberg-ready array
  * @author Corey Collins
  */
-function harmonium_get_theme_colors_gutenberg() {
+function _s_get_theme_colors_gutenberg() {
 
 	// Grab our ACF theme colors.
-	$colors = harmonium_get_theme_colors();
+	$colors = _s_get_theme_colors();
 
 	if ( ! $colors ) {
 		return array();
