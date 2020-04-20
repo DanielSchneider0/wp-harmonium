@@ -16,6 +16,12 @@ Based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc.
 */
 
 //-----------------------------------------
+// Harmonium Variables
+//-----------------------------------------
+@import 'utilities/variables/color-palette';
+@import '../../node_modules/harmonium/scss/app';
+
+//-----------------------------------------
 // Extras
 //-----------------------------------------
 @import "vendor/sanitize/sanitize";
@@ -57,3 +63,6 @@ Based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc.
 
 // WP Widgets.
 @import "widgets/index";
+
+// Harmonium Styles
+@import 'utilities/variables/harmonium-settings.scss';
