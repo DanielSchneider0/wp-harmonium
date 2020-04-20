@@ -1,20 +1,20 @@
 {
-  "name": "wd_s",
-  "version": "1.0.0",
-  "description": "A theme boilerplate for WebDevStudios.",
-  "author": "WebDevStudios",
+  "name": "Harmonium",
+  "version": "2.0.0",
+  "description": "A starter theme for Revelry",
+  "author": "Revelry",
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WebDevStudios/wd_s.git"
+    "url": "git+https://github.com/revelrylabs/wp-harmonium.git"
   },
   "keywords": [
     "theme"
   ],
   "bugs": {
-    "url": "https://github.com/WebDevStudios/wd_s/issues"
+    "url": "https://github.com/revelrylabs/wp-harmonium/issues"
   },
-  "homepage": "https://github.com/WebDevStudios/wd_s#readme",
+  "homepage": "https://github.com/revelrylabs/wp-harmonium#readme",
   "main": "src/js/index.js",
   "dependencies": {
     "slick-carousel": "^1.8.1"

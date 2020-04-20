@@ -1,6 +1,6 @@
 {
-    "name": "webdevstudios/wd_s",
-    "description": "A theme boilerplate for WebDevStudios.",
+    "name": "revelrylabs/harmonium",
+    "description": "A starter theme for Revelry",
     "type": "wordpress-theme",
     "require-dev": {
         "webdevstudios/php-coding-standards": "^1.0"
@@ -11,8 +11,8 @@
     "license": "GPL-2.0",
     "authors": [
         {
-            "name": "WebDevStudios",
-            "email": "contact@webdevstudios.com"
+            "name": "Revelry",
+            "email": "hello@revelry.co"
         }
     ],
     "minimum-stability": "stable"
