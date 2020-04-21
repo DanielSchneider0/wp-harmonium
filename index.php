@@ -15,41 +15,51 @@
 get_header(); ?>
 
 	<main id="main" class="site-main">
+		<div class="rev-ContentWrapper">
+			<div class="rev-Content">
+				<div class="rev-Row">
+					<div class="rev-Col rev-Col--small9">
 
-		<?php
-		if ( have_posts() ) :
+						<?php
+						if ( have_posts() ) :
 
-			if ( is_home() && ! is_front_page() ) :
-		?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+							if ( is_home() && ! is_front_page() ) :
+						?>
+								<header>
+									<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+								</header>
 
-			<?php
-			endif;
+							<?php
+							endif;
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+							/* Start the Loop */
+							while ( have_posts() ) :
+								the_post();
 
-				/*
-					* Include the Post-Format-specific template for the content.
-					* If you want to override this in a child theme, then include a file
-					* called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					*/
-				get_template_part( 'template-parts/content', get_post_format() );
+								/*
+									* Include the Post-Format-specific template for the content.
+									* If you want to override this in a child theme, then include a file
+									* called content-___.php (where ___ is the Post Format name) and that will be used instead.
+									*/
+								get_template_part( 'template-parts/content', get_post_format() );
 
-			endwhile;
+							endwhile;
 
-			harmonium_display_numeric_pagination();
+							harmonium_display_numeric_pagination();
 
-		else :
+						else :
 
-			get_template_part( 'template-parts/content', 'none' );
+							get_template_part( 'template-parts/content', 'none' );
 
-		endif;
-		?>
-
+						endif;
+						?>
+						</div>
+					<div class="rev-Col rev-Col--small3">
+						<?php get_sidebar(); ?>
+					</div><!-- rev-Col -->
+				</div>
+			</div>
+		</div>
 	</main><!-- #main -->
 
 <?php get_footer(); ?>

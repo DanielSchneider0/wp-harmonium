@@ -15,19 +15,19 @@ harmonium_display_block_options(
 	array(
 		'block'     => $fifty_block,
 		'container' => 'section', // Any HTML5 container: section, div, etc...
-		'class'     => 'content-block grid-container fifty-fifty-block fifty-text-only' . esc_attr( $fifty_alignment . $fifty_classes ), // The container class.
+		'class'     => 'rev-Row content-block grid-container fifty-fifty-block fifty-text-only' . esc_attr( $fifty_alignment . $fifty_classes ), // The container class.
 	)
 );
 ?>
-	<div class="display-flex container">
+	<div class="rev-Row rev-Row--flex rev-Row--justifyCenter display-flex container">
+		<div class="rev-Row">
+			<div class="rev-Col rev-Col--medium6 half">
+				<?php echo harmonium_get_the_content( $text_primary ); // WPCS: XSS OK. ?>
+			</div>
 
-		<div class="half">
-			<?php echo harmonium_get_the_content( $text_primary ); // WPCS: XSS OK. ?>
-		</div>
-
-		<div class="half">
-			<?php echo harmonium_get_the_content( $text_secondary ); // WPCS: XSS OK. ?>
-		</div>
-
+			<div class="rev-Col rev-Col--medium6 half">
+				<?php echo harmonium_get_the_content( $text_secondary ); // WPCS: XSS OK. ?>
+			</div>
+		</div><!-- end rev-Row -->
 	</div>
 </section>
