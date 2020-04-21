@@ -10,7 +10,7 @@
 //-----------------------------------------
 // Grid Values – Used for general Sass/styling. Note the rem values!
 //-----------------------------------------
-$max-width: rem(1170);
+$max-width: 100%; // TODO better solution?
 
 ///-----------------------------------------
 // Breakpoints – Used for Media Query Mixins only. Note the px values!
