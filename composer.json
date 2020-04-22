@@ -1,18 +1,18 @@
 {
-    "name": "webdevstudios/wd_s",
-    "description": "A theme boilerplate for WebDevStudios.",
+    "name": "revelrylabs/harmonium",
+    "description": "A starter theme for Revelry",
     "type": "wordpress-theme",
     "require-dev": {
-        "webdevstudios/wds-coding-standards": "^1.2"
+        "webdevstudios/php-coding-standards": "^1.0"
     },
     "scripts": {
-      "sniff": "vendor/bin/phpcs --runtime-set installed_paths vendor/wp-coding-standards/wpcs,vendor/webdevstudios/wds-coding-standards/WebDevStudios -p ./ --standard=WebDevStudios --report=full --extensions=php --ignore=*/vendor/*,*/node_modules/*"
+      "sniff": "composer install"
     },
     "license": "GPL-2.0",
     "authors": [
         {
-            "name": "WebDevStudios",
-            "email": "contact@webdevstudios.com"
+            "name": "Revelry",
+            "email": "hello@revelry.co"
         }
     ],
     "minimum-stability": "stable"

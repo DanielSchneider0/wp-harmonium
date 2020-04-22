@@ -103,7 +103,8 @@ function harmonium_customize_copyright_text( $wp_customize ) {
 	$wp_customize->add_setting(
 		'harmonium_copyright_text',
 		array(
-			'default' => '',
+			'default'           => '',
+			'sanitize_callback' => 'wp_kses_post',
 		)
 	);
 

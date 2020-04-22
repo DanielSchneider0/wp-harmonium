@@ -53,14 +53,13 @@ get_header(); ?>
 
 						endif;
 						?>
-					</div>
+						</div>
 					<div class="rev-Col rev-Col--small3">
 						<?php get_sidebar(); ?>
 					</div><!-- rev-Col -->
 				</div>
 			</div>
 		</div>
-
 	</main><!-- #main -->
 
 <?php get_footer(); ?>

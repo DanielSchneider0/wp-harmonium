@@ -161,7 +161,7 @@ function harmonium_get_svg( $args = array() ) {
 		echo harmonium_get_the_content( $width ); // WPCS XSS OK.
 		echo harmonium_get_the_content( $fill ); // WPCS XSS OK.
 	?>
-		class="icon icon-<?php echo esc_attr( $args['icon'] ); ?>"
+		class="icon <?php echo esc_attr( $args['icon'] ); ?>"
 	<?php
 		echo harmonium_get_the_content( $aria_hidden ); // WPCS XSS OK.
 		echo harmonium_get_the_content( $aria_labelledby ); // WPCS XSS OK.
@@ -184,9 +184,9 @@ function harmonium_get_svg( $args = array() ) {
 		// Use absolute path in the Customizer so that icons show up in there.
 		if ( is_customize_preview() ) :
 		?>
-			<use xlink:href="<?php echo esc_url( get_parent_theme_file_uri( '/assets/images/svg-icons.svg#icon-' . esc_html( $args['icon'] ) ) ); ?>"></use>
+			<use xlink:href="<?php echo esc_url( get_parent_theme_file_uri( '/dist/images/icons/sprite.svg#' . esc_html( $args['icon'] ) ) ); ?>"></use>
 		<?php else : ?>
-			<use xlink:href="#icon-<?php echo esc_html( $args['icon'] ); ?>"></use>
+			<use xlink:href="#<?php echo esc_html( $args['icon'] ); ?>"></use>
 		<?php endif; ?>
 
 	</svg>
@@ -233,85 +233,14 @@ function harmonium_get_the_excerpt( $args = array() ) {
 	$defaults = array(
 		'length' => 20,
 		'more'   => '...',
+		'post'   => '',
 	);
 
 	// Parse args.
 	$args = wp_parse_args( $args, $defaults );
 
 	// Trim the excerpt.
-	return wp_trim_words( get_the_excerpt(), absint( $args['length'] ), esc_html( $args['more'] ) );
-}
-
-/**
- * Echo an image, no matter what.
- *
- * @param string $size The image size to display. Default is thumbnail.
- *
- * @author WDS
- * @return string
- */
-function harmonium_display_post_image( $size = 'thumbnail' ) {
-
-	// If post has a featured image, display it.
-	if ( has_post_thumbnail() ) {
-		the_post_thumbnail( $size );
-		return false;
-	}
-
-	$attached_image_url = harmonium_get_attached_image_url( $size );
-
-	// Else, display an attached image or placeholder.
-	?>
-	<img src="<?php echo esc_url( $attached_image_url ); ?>" class="attachment-thumbnail wp-post-image" alt="<?php echo esc_html( get_the_title() ); ?>"/>
-	<?php
-}
-
-/**
- * Return an image URL, no matter what.
- *
- * @param  string $size The image size to return. Default is thumbnail.
- *
- * @author WDS
- * @return string
- */
-function harmonium_get_post_image_url( $size = 'thumbnail' ) {
-
-	// If post has a featured image, return its URL.
-	if ( has_post_thumbnail() ) {
-
-		$featured_image_id = get_post_thumbnail_id( get_the_ID() );
-		$media             = wp_get_attachment_image_src( $featured_image_id, $size );
-
-		if ( is_array( $media ) ) {
-			return current( $media );
-		}
-	}
-
-	// Else, return the URL for an attached image or placeholder.
-	return harmonium_get_attached_image_url( $size );
-}
-
-/**
- * Get the URL of an image that's attached to the current post, else a placeholder image URL.
- *
- * @param  string $size The image size to return. Default is thumbnail.
- *
- * @author WDS
- * @return string
- */
-function harmonium_get_attached_image_url( $size = 'thumbnail' ) {
-
-	// Check for any attached image.
-	$media = get_attached_media( 'image', get_the_ID() );
-	$media = current( $media );
-
-	// If an image is attached, return its URL.
-	if ( is_array( $media ) && $media ) {
-		return 'thumbnail' === $size ? wp_get_attachment_thumb_url( $media->ID ) : wp_get_attachment_url( $media->ID );
-	}
-
-	// Return URL to a placeholder image as a fallback.
-	return get_stylesheet_directory_uri() . '/assets/images/placeholder.png';
+	return wp_trim_words( get_the_excerpt( $args['post'] ), absint( $args['length'] ), esc_html( $args['more'] ) );
 }
 
 /**
@@ -403,7 +332,9 @@ function harmonium_display_social_network_links() {
 						<?php
 						harmonium_display_svg(
 							array(
-								'icon' => $network . '-square',
+								'icon'   => $network . '-square',
+								'width'  => '24',
+								'height' => '24',
 							)
 						);
 						?>
@@ -444,9 +375,13 @@ function harmonium_display_card( $args = array() ) {
 	?>
 	<div class="<?php echo esc_attr( $args['class'] ); ?> card">
 
-		<?php if ( $args['image'] ) : ?>
-			<a href="<?php echo esc_url( $args['url'] ); ?>" tabindex="-1"><img class="card-image" src="<?php echo esc_url( $args['image'] ); ?>" alt="<?php echo esc_attr( $args['title'] . '-image' ); ?>"></a>
-		<?php endif; ?>
+		<a href="<?php echo esc_url( $args['url'] ); ?>" tabindex="-1">
+			<?php if ( $args['image'] ) : ?>
+				<?php echo wp_kses_post( $args['image'] ); ?>
+			<?php else : ?>
+				<img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/dist/images/placeholder.png" class="card-image" loading="lazy" alt="<?php echo sprintf( esc_attr( 'Featured image for %s', 'harmonium' ), esc_attr( $args['title'] ) ); ?>">
+			<?php endif; ?>
+		</a>
 
 		<div class="card-section">
 
@@ -498,7 +433,7 @@ function harmonium_display_header_button() {
 			<button type="button" class="cta-button" aria-expanded="false" aria-label="<?php esc_html_e( 'Search', 'harmonium' ); ?>">
 				<?php esc_html_e( 'Search', 'harmonium' ); ?>
 			</button>
-			<div class="form-container">
+			<div class="form-container" aria-hidden="true">
 				<?php get_search_form(); ?>
 			</div><!-- .form-container -->
 		<?php endif; ?>
