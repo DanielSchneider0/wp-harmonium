@@ -404,3 +404,11 @@ $help-text-color: $gray;
 $progress-radius: $global-rounded;
 $progress-meter-height: $size-tiny;
 $progress-meter-bkgd: $darker-gray;
+
+//# Helper variables for compatibility
+$font-sans: $global-sans-serif-font;
+$font-serif: $global-serif-font;
+$font-code: $global-monospace-font;
+$font-pre: $global-monospace-font;
+$line-height-body: $global-lineheight;
+$line-height-pre: 1;
