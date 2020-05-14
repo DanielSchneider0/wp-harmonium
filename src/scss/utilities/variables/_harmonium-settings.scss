@@ -26,9 +26,9 @@ $breakpoints: (
   global-width: (min-width: $global-width),
   nav: (min-width: $nav), // Desktop nav
   nav-only: ((min-width: $small) and (max-width: $nav - 1)), // Mobile nav
-	phone: (min-width: $phone),
-	wp-admin-bar: (min-width: $wp-admin-bar),
-	container-offset: (min-width: $container-offset)
+	// phone: (min-width: $phone),
+	// wp-admin-bar: (min-width: $wp-admin-bar),
+	// container-offset: (min-width: $container-offset)
 );
 
 // IMPORT FONTS HERE
