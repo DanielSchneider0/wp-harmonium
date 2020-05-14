@@ -22,6 +22,8 @@
 	<?php wp_footer(); ?>
 
 	<?php harmonium_display_mobile_menu(); ?>
-
+	<script>
+		feather.replace()
+	</script>
 </body>
 </html>
