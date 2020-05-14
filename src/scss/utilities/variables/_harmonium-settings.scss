@@ -33,6 +33,18 @@ $breakpoints: (
 
 // IMPORT FONTS HERE
 
+// Example Import of custom font
+
+// @font-face {
+//  font-family: BureauGrotBlack;
+//  src: url('/wp-content/themes/themeename/path/to/font/file'); /* IE9 Compat Modes */
+  // src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  //     url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+  //     url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+  //     url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+  //     url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+// }
+
 // Global Fonts
 $global-monospace-font: 'Montserrat', sans-serif;
 $global-serif-font: 'Georgia', serif;
