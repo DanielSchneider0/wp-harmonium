@@ -101,6 +101,8 @@ This repo is not a complete WordPress install. It only consists of the Harmonium
 
 To set up your local environment to work on this project:
 
+Before you start, make sure that you're running Node version 10 or higher.
+
 - Start MAMP and point apache at an empty folder
 - Install [WordPress](https://codex.wordpress.org/Installing_WordPress)
 - From the command line, run the following commands
@@ -110,6 +112,9 @@ To set up your local environment to work on this project:
 - From the command line, run the following commands
 	- `cd harmonium`
 	- `npm i`
+
+You may also need to run `npm run-s build && composer install`
+
 
 ### Install dependencies
 
