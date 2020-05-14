@@ -5,6 +5,20 @@
 	flex: 0 0 100%;
 	width: 100%;
 
+	.container {
+		width: $xxlarge;
+	}
+
+	.feather {
+		width: 30px;
+		height: 30px;
+		stroke: currentColor;
+		stroke-width: 2;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		fill: none;
+	}
+
 	// Site logo.
 	.site-branding {
 		flex: 0 0 auto;
