@@ -65,6 +65,12 @@ $color-rss:       #f90;
 $color-twitter:   #00aced;
 $color-youtube:   #b00;
 
+//-----------------------------------------
+// Project Specific Colors
+//-----------------------------------------
+
+// $color-badass:  #bada55;
+
 
 //--------------------------------------------------------------
 // ELEMENTS & SKINNING
@@ -273,6 +279,14 @@ $color-background-scaffolding: $color-white;
 //-----------------------------------------
 // Sass Map for Theme Colors
 //-----------------------------------------
+
+// NOTE: The variable $theme-colors is what gets used to display
+//       colors in the Gutenberg editor so the client can only
+//       pick colors that match the theme. To add new colors,
+//       above in the 'Project Specific Colors' section, add the
+//       list of color variables you want to create. Then, edit
+//       the variable below to remove what you don't need and add
+//       what you do.
 
 /// Sass map used for creating color presentational classes.
 $theme-colors: (
