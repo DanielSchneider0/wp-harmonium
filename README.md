@@ -41,7 +41,7 @@ Create a WordPress theme that incorporates the Harmonium asset library to be use
 
 ### Who are we building for?
 
-Initially, this project is being built for the developers at Revelry. The theme will provide developers a consistant starting point for kicking off WordPress based projects. 
+Initially, this project is being built for the developers at Revelry. The theme will provide developers a consistent starting point for kicking off WordPress based projects. 
 
 The long term plan for the project is to create a starter theme that is released as Open Source Software. This serves the double-purpose of giving back to the WordPress community while expanding the visibility of the Harmonium asset library.
 
